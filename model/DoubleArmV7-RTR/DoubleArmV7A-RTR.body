@@ -7,7 +7,7 @@ rootLink: TFRAME
 links:
   -
     type: SubBody
-    uri: DoubleArmV7-Upper.body
+    uri: DoubleArmV7-RTR-Upper.body
     jointIdOffset: 0
     elements:
       -

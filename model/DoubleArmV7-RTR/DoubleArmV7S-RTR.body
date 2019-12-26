@@ -7,7 +7,7 @@ rootLink: TFRAME
 links:
   -
     type: SubBody
-    uri: DoubleArmV7-Upper.body
+    uri: DoubleArmV7-RTR-Upper.body
     jointIdOffset: 0
   -
     name: TRACK_L
@@ -22,7 +22,7 @@ links:
         elements:
           -
             type: Resource
-            geometry: { uri: "prt/tframe.stl" }
+            uri: "prt/tframe.wrl"
           -
             type: RigidBody
             mass: 73.0
@@ -44,7 +44,7 @@ links:
         elements:
           -
             type: Resource
-            geometry: { uri: "prt/tframe.stl" }
+            uri: "prt/tframe.wrl"
           -
             type: RigidBody
             mass: 73.0
