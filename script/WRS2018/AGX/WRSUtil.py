@@ -28,7 +28,7 @@ def loadProject(
     viewProject.name = "ViewProject"
     viewProject.load(os.path.join(projectdir, view + ".cnoid"))
     RootItem.instance.addChildItem(viewProject)
-    itv.expandItem(viewProject, False)
+    # itv.expandItem(viewProject, False)
 
     world = WorldItem()
     world.name = "World"
@@ -38,7 +38,7 @@ def loadProject(
     taskProject.name = task
     taskProject.load(os.path.join(projectdir, task + ".cnoid"))
     world.addChildItem(taskProject)
-    itv.expandItem(taskProject, False)
+    # itv.expandItem(taskProject, False)
 
     if not isinstance(simulatorProjects, list):
         simulatorProjects = [ simulatorProjects ]
