@@ -9,6 +9,7 @@ items:
       name: "DoubleArmV7-RTR"
       plugin: Body
       class: BodyItem
+      isChecked: true
       data: 
         modelFile: "${SHARE}/rtr_models/model/DoubleArmV7-RTR/DoubleArmV7S-RTR.body"
         currentBaseLink: "TFRAME"
@@ -37,18 +38,19 @@ items:
         zmp: [ 0, 0, 0 ]
         collisionDetection: true
         selfCollisionDetection: true
-        isEditable: true
+        isSceneBodyDraggable: true
       children: 
         - 
           id: 2
-          name: "DoubleArmV7-RTR_DiffDrive"
+          name: "DiffDriveController"
           plugin: Body
           class: SimpleControllerItem
+          isChecked: true
           data: 
             isNoDelayMode: false
             controllerOptions: ""
-            controller: "${LIBS}/simplecontroller/DArmV7RTR_DiffDriveController.so"
-            baseDirectory: "None"
+            controller: "DArmV7RTR_DiffDriveController.so"
+            baseDirectory: "Controller directory"
             reloading: false
             exportSymbols: false
             isOldTargetVariableMode: false
@@ -57,6 +59,7 @@ items:
           name: "BodyRos"
           plugin: RosBody
           class: BodyRosItem
+          isChecked: true
           data: 
             jointStateUpdateRate: 100
         - 
@@ -64,6 +67,7 @@ items:
           name: "BodyTrackingCamera"
           plugin: Body
           class: BodyTrackingCameraItem
+          isChecked: true
           data: 
             targetLink: ""
             keepRelativeAttitude: false
@@ -83,7 +87,6 @@ views:
     class: ItemTreeView
     mounted: true
     state: 
-      checked: [ 1, 2, 3, 4 ]
       expanded: [ 1 ]
   - 
     id: 2
@@ -153,7 +156,7 @@ views:
       gridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
       xzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
       yzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
-      dedicatedItemTreeViewChecks: false
+      isDedicatedItemCheckEnabled: false
   - 
     id: 4
     name: "Camera Scene"
@@ -219,7 +222,7 @@ views:
       gridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
       xzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
       yzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
-      dedicatedItemTreeViewChecks: false
+      isDedicatedItemCheckEnabled: false
   - 
     id: 5
     plugin: Body
@@ -302,10 +305,6 @@ toolbars:
     speedScale: 1
     syncToOngoingUpdates: true
     autoExpansion: true
-  "LeggedBodyBar": 
-    stanceWidth: 0.15
-  "BodyBar": 
-    current: 1
   "KinematicsBar": 
     mode: AUTO
     enablePositionDragger: true
@@ -314,6 +313,10 @@ toolbars:
     snapDistance: 0.025
     penetrationBlockDepth: 0.0005
     lazyCollisionDetectionMode: true
+  "BodyBar": 
+    current: 1
+  "LeggedBodyBar": 
+    stanceWidth: 0.15
 Body: 
   "BodyMotionEngine": 
     updateJointVelocities: false
@@ -327,7 +330,6 @@ Body:
         showCenterOfMass: false
         showPpcom: false
         showZmp: false
-    staticModelEditing: true
   "KinematicFaultChecker": 
     checkJointPositions: true
     angleMargin: 0
@@ -349,12 +351,12 @@ viewAreas:
     contents: 
       type: splitter
       orientation: horizontal
-      sizes: [ 335, 1581 ]
+      sizes: [ 293, 1383 ]
       children: 
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 479, 479 ]
+          sizes: [ 464, 464 ]
           children: 
             - 
               type: pane
@@ -367,12 +369,12 @@ viewAreas:
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 684, 274 ]
+          sizes: [ 663, 265 ]
           children: 
             - 
               type: splitter
               orientation: horizontal
-              sizes: [ 698, 879 ]
+              sizes: [ 610, 769 ]
               children: 
                 - 
                   type: pane

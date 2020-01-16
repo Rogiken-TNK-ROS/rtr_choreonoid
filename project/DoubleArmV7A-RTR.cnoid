@@ -9,14 +9,20 @@ items:
       name: "DoubleArmV7-RTR"
       plugin: Body
       class: BodyItem
+      isChecked: true
       data: 
-        modelFile: "${SHARE}/rtr_models/model/DoubleArmV7-RTR/DoubleArmV7A-RTR.body"
+        modelFile: "/home/ryodo/workspace/ROS/wrs_ws/devel/bin/../share/choreonoid-1.8/rtr_models/model/DoubleArmV7-RTR/DoubleArmV7A-RTR.body"
         currentBaseLink: "TFRAME"
         rootPosition: [ 1, 0.0037, 0.5376 ]
         rootAttitude: [ 
           1, 0, 0, 
           0, 1, 0, 
           0, 0, 1 ]
+        jointDisplacements: [ 
+           22.431298, -43.674166, -75.099985,  152.100012,  0.000000,  5.820850, -20.000009, -20.000009, -0.000000, -0.000000, 
+           0.000000,  0.000000, -0.000000, -0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000 ]
         jointPositions: [ 
            0.391500, -0.762258, -1.310742,  2.654646,  0.000000,  0.101593, -0.349066, -0.349066, -0.000000, -0.000000, 
            0.000000,  0.000000, -0.000000, -0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
@@ -35,13 +41,14 @@ items:
         zmp: [ 0, 0, 0 ]
         collisionDetection: true
         selfCollisionDetection: true
-        isEditable: true
+        isSceneBodyDraggable: true
       children: 
         - 
           id: 2
           name: "BodyRos"
           plugin: RosBody
           class: BodyRosItem
+          isChecked: true
           data: 
             jointStateUpdateRate: 100
         - 
@@ -49,6 +56,7 @@ items:
           name: "BodyTrackingCamera"
           plugin: Body
           class: BodyTrackingCameraItem
+          isChecked: true
           data: 
             targetLink: ""
             keepRelativeAttitude: false
@@ -56,6 +64,21 @@ items:
             nearClipDistance: 0.05
             farClipDistance: 200
             fieldOfView: 0.785398
+        - 
+          id: 4
+          name: "DiffDriveController"
+          plugin: Body
+          class: SimpleControllerItem
+          isSelected: true
+          isChecked: true
+          data: 
+            isNoDelayMode: false
+            controllerOptions: ""
+            controller: "DArmV7RTR_DiffDriveController.so"
+            baseDirectory: "Controller directory"
+            reloading: false
+            exportSymbols: false
+            isOldTargetVariableMode: false
 views: 
   - 
     id: 0
@@ -68,8 +91,6 @@ views:
     class: ItemTreeView
     mounted: true
     state: 
-      selected: [ 1 ]
-      checked: [ 1, 2, 3 ]
       expanded: [ 1 ]
   - 
     id: 2
@@ -86,6 +107,9 @@ views:
       viewpointControlMode: thirdPerson
       collisionLines: false
       polygonMode: fill
+      restrictCameraRoll: true
+      verticalAxis: Z
+      lightingMode: full
       cullingMode: enabled
       defaultHeadLight: true
       defaultHeadLightIntensity: 0.75
@@ -108,11 +132,9 @@ views:
       pointSize: 1
       normalVisualization: false
       normalLength: 0.01
+      lightweightViewChange: false
       coordinateAxes: true
       fpsTestIteration: 1
-      showFPS: false
-      enableNewDisplayListDoubleRendering: false
-      useBufferForPicking: true
       upsideDown: false
       cameras: 
         - 
@@ -138,7 +160,7 @@ views:
       gridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
       xzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
       yzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
-      dedicatedItemTreeViewChecks: false
+      isDedicatedItemCheckEnabled: false
   - 
     id: 4
     name: "Camera Scene"
@@ -149,6 +171,9 @@ views:
       viewpointControlMode: thirdPerson
       collisionLines: false
       polygonMode: fill
+      restrictCameraRoll: true
+      verticalAxis: Z
+      lightingMode: full
       cullingMode: enabled
       defaultHeadLight: true
       defaultHeadLightIntensity: 0.75
@@ -171,11 +196,9 @@ views:
       pointSize: 1
       normalVisualization: false
       normalLength: 0.01
+      lightweightViewChange: false
       coordinateAxes: true
       fpsTestIteration: 1
-      showFPS: false
-      enableNewDisplayListDoubleRendering: false
-      useBufferForPicking: true
       upsideDown: false
       cameras: 
         - 
@@ -203,7 +226,7 @@ views:
       gridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
       xzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
       yzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
-      dedicatedItemTreeViewChecks: false
+      isDedicatedItemCheckEnabled: false
   - 
     id: 5
     plugin: Body
@@ -214,16 +237,15 @@ views:
   - 
     id: 6
     plugin: Body
-    class: JointSliderView
+    class: JointDisplacementView
     state: 
-      showAllJoints: true
-      jointId: false
-      name: true
-      numColumns: 1
-      spinBox: true
-      slider: true
-      dial: true
-      labelOnLeft: true
+      showSelectedJoints: false
+      showJointIDs: false
+      showJointNames: true
+      overlapJointNames: false
+      showSliders: true
+      showDials: false
+      showPhases: false
       currentBodyItem: 1
   - 
     id: 7
@@ -286,6 +308,10 @@ toolbars:
     speedScale: 1
     syncToOngoingUpdates: true
     autoExpansion: true
+  "BodyBar": 
+    current: 1
+  "LeggedBodyBar": 
+    stanceWidth: 0.15
   "KinematicsBar": 
     mode: AUTO
     enablePositionDragger: true
@@ -294,13 +320,12 @@ toolbars:
     snapDistance: 0.025
     penetrationBlockDepth: 0.0005
     lazyCollisionDetectionMode: true
-  "BodyBar": 
-    current: 1
-  "LeggedBodyBar": 
-    stanceWidth: 0.15
 Body: 
   "BodyMotionEngine": 
     updateJointVelocities: false
+  "BodySelectionManager": 
+    currentBodyItem: 1
+    currentLink: "TFRAME"
   "EditableSceneBody": 
     editableSceneBodies: 
       - 
@@ -308,7 +333,6 @@ Body:
         showCenterOfMass: false
         showPpcom: false
         showZmp: false
-    staticModelEditing: true
   "KinematicFaultChecker": 
     checkJointPositions: true
     angleMargin: 0
@@ -330,12 +354,12 @@ viewAreas:
     contents: 
       type: splitter
       orientation: horizontal
-      sizes: [ 127, 258 ]
+      sizes: [ 553, 1123 ]
       children: 
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 116, 116 ]
+          sizes: [ 464, 464 ]
           children: 
             - 
               type: pane
@@ -348,12 +372,12 @@ viewAreas:
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 131, 101 ]
+          sizes: [ 524, 404 ]
           children: 
             - 
               type: splitter
               orientation: horizontal
-              sizes: [ 127, 127 ]
+              sizes: [ 560, 559 ]
               children: 
                 - 
                   type: pane
