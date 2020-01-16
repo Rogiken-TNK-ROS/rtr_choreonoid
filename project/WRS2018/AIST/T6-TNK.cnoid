@@ -73,7 +73,7 @@ items:
           plugin: Base
           class: SubProjectItem
           data: 
-            filename: "${SHARE}/rtr-models/project/TNK/DoubleArmV7A-RTR.cnoid"
+            filename: "${SHARE}/rtr-models/project/TNK/DoubleArmV7S-RTR.cnoid"
             format: PROJECT
             saveMode: "Manual save"
         - 
