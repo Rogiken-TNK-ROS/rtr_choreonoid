@@ -74,7 +74,7 @@ items:
                 antiAliasing: false
         - 
           id: 5
-          name: "DoubleArmV7A"
+          name: "DoubleArmV7S-RTR"
           plugin: Base
           class: SubProjectItem
           data: 
