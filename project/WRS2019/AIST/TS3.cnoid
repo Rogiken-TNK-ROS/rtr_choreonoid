@@ -1,0 +1,109 @@
+items: 
+  id: 0
+  name: "Root"
+  plugin: Base
+  class: RootItem
+  children: 
+    - 
+      id: 1
+      name: "World"
+      plugin: Body
+      class: WorldItem
+      data: 
+        collisionDetection: false
+        collisionDetector: AISTCollisionDetector
+        materialTableFile: "${SHARE}/default/materials.yaml"
+      children: 
+        - 
+          id: 2
+          name: "TS3"
+          plugin: Base
+          class: SubProjectItem
+          data: 
+            filename: "${SHARE}/WRS2019/project/TS3.cnoid"
+            format: PROJECT
+            saveMode: "Manual save"
+        - 
+          id: 3
+          name: "AISTSimulator"
+          plugin: Body
+          class: AISTSimulatorItem
+          data: 
+            timeStep: 0.001
+            realtimeSync: true
+            recording: "off"
+            timeRangeMode: "Unlimited"
+            timeLength: 60
+            allLinkPositionOutputMode: false
+            deviceStateOutput: true
+            controllerThreads: true
+            recordCollisionData: false
+            controllerOptions: ""
+            dynamicsMode: "Forward dynamics"
+            integrationMode: "Runge Kutta"
+            gravity: [ 0, 0, -9.80665 ]
+            staticFriction: 0.5
+            dynamicFriction: 0.5
+            cullingThresh: 0.01
+            contactCullingDepth: 0.05
+            errorCriterion: 0.001
+            maxNumIterations: 1000
+            contactCorrectionDepth: 0.0001
+            contactCorrectionVelocityRatio: 30
+            kinematicWalking: false
+            2Dmode: false
+            oldAccelSensorMode: false
+          children: 
+            - 
+              id: 4
+              name: "GLVisionSimulator"
+              plugin: Body
+              class: GLVisionSimulatorItem
+              data: 
+                enabled: true
+                maxFrameRate: 1000
+                maxLatency: 1
+                recordVisionData: false
+                threadMode: Sensor
+                bestEffort: false
+                allSceneObjects: false
+                rangeSensorPrecisionRatio: 2
+                depthError: 0
+                enableHeadLight: true
+                enableAdditionalLights: true
+                antiAliasing: false
+        - 
+          id: 5
+          name: "DoubleArmV7S-RTR"
+          plugin: Base
+          class: SubProjectItem
+          data: 
+            filename: "${SHARE}/rtr_models/project/DoubleArmV7S-RTR.cnoid"
+            format: PROJECT
+            saveMode: "Manual save"
+        - 
+          id: 6
+          name: "WorldRos"
+          plugin: RosBody
+          class: WorldRosItem
+          data: 
+            publishClockUpdateRate: 100
+            publishLinkStatesUpdateRate: 0
+            publishModelStatesUpdateRate: 0
+            publishContactsStateUpdateRate: 0
+            contactsStateMessagesVerbose: false
+views: 
+  - 
+    id: 0
+    plugin: Base
+    class: ItemPropertyView
+    mounted: true
+  - 
+    id: 1
+    plugin: Base
+    class: ItemTreeView
+    mounted: true
+    state: 
+      selected: [ 3 ]
+      checked: [ 2, 3, 5, 6 ]
+      expanded: [ 1 ]
