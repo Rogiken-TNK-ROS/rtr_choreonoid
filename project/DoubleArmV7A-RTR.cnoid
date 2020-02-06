@@ -11,7 +11,7 @@ items:
       class: BodyItem
       isChecked: true
       data: 
-        modelFile: "/home/ryodo/workspace/ROS/wrs_ws/devel/bin/../share/choreonoid-1.8/rtr_models/model/DoubleArmV7-RTR/DoubleArmV7A-RTR.body"
+        modelFile: "${SHARE}/rtr_models/model/DoubleArmV7-RTR/DoubleArmV7A-RTR.body"
         currentBaseLink: "TFRAME"
         rootPosition: [ 1, 0.0037, 0.5376 ]
         rootAttitude: [ 
