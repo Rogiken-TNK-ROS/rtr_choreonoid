@@ -15,4 +15,4 @@ endif()
 install(DIRECTORY
   model
   project
-  DESTINATION ${CNOID_SHARE_SUBDIR}/rtr_models)
+  DESTINATION ${CHOREONOID_SHARE_SUBDIR}/rtr_models)
