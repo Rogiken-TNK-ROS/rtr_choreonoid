@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find double_arm_v7_rtr_description)/urdf/common.xacro"/>
+    <!-- == Material == -->
+  <material name="mframe_color">
+    <color rgba="0.2 0.2 0.2 1"/>
+  </material>
+  <material name="block_color">
+    <color rgba="1 0.85 0.33 1"/>
+  </material>
+  <material name="boom_color">
+    <color rgba="1 0.85 0.33 1"/>
+  </material>
+  <material name="arm_color">
+    <color rgba="1 0.85 0.33 1"/>
+  </material>
+  <material name="tohku_pitch_color">
+    <color rgba="0.5 0.5 0.5 1"/>
+  </material>
+  <material name="tohku_roll_color">
+    <color rgba="0.39 0.51 0.91 1"/>
+  </material>
+  <material name="tohku_tip_color">
+    <color rgba="0.7 0.7 0.7 1"/>
+  </material>
+  
+  <!-- Link -->
+  <link name="MFRAME">
+    <visual>
+      <origin rpy="${M_PI/2} 0 ${M_PI}"/>
+      <material name="mframe_color"/>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/middleframe.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="${M_PI/2} 0 ${M_PI}"/>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/middleframe.stl"/>
+      </geometry>      
+    </collision>
+    <inertial>
+      <mass value="1e-06" />
+      <origin xyz="0 0 0" rpy="0 -0 0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+
+  <link name="BLOCK">
+    <visual>
+      <origin rpy="${M_PI/2} 0 ${M_PI}"/>
+      <material name="block_color"/>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/swingbrkt.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="${M_PI/2} 0 ${M_PI}"/>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/swingbrkt.stl"/>
+      </geometry>      
+    </collision>
+    <inertial>
+      <mass value="1e-06" />
+      <origin xyz="0 0 0" rpy="0 -0 0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+
+  <link name="BOOM">
+    <visual>
+      <material name="boom_color"/>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/cp_boom.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/cp_boom.stl"/>
+      </geometry>      
+    </collision>
+    <inertial>
+      <mass value="88.2695650987" />
+      <origin xyz="-0.831227871921433 0.142962825496583 0.0" rpy="0 -0 0" />
+      <inertia ixx="1.48138597730672" ixy="0.1902362002908" ixz="1.05546586084014e-15" iyy="31.4435403431583" iyz="-2.05305944696362e-17" izz="32.5752155940256" />
+    </inertial>
+    
+  </link>
+
+  <link name="ARM">
+    <visual>
+      <material name="arm_color"/>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/cp_arm.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/cp_arm.stl"/>
+      </geometry>      
+    </collision>
+    <inertial>
+      <mass value="53.7797060658" />
+      <origin xyz="-0.133362844584537 0.0813367709948192 0.0" rpy="0 -0 0" />
+      <inertia ixx="0.35420506763418" ixy="-0.59676584437886" ixz="1.78134245842626e-16" iyy="5.16579159038522" iyz="6.97110293472855e-17" izz="5.39850890239257" />
+    </inertial>
+  </link>
+
+  <link name="TOHKU_PITCH">
+    <visual>
+      <origin rpy="${-M_PI/2} ${-M_PI/2} 0"/>
+      <material name="tohku_pitch_color"/>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/tohku_hand_pitch.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="${-M_PI/2} ${-M_PI/2} 0"/>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/tohku_hand_pitch.stl"/>
+      </geometry>      
+    </collision>
+    <inertial>
+      <mass value="1e-06" />
+      <origin xyz="0 0 0" rpy="0 -0 0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+
+  <link name="TOHKU_ROLL">
+    <visual>
+      <origin rpy="${-M_PI/2} ${-M_PI/2} 0"/>
+      <material name="tohku_roll_color"/>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/tohku_hand_roll.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="${-M_PI/2} ${-M_PI/2} 0"/>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/tohku_hand_roll.stl"/>
+      </geometry>      
+    </collision>
+    <inertial>
+      <mass value="1e-06" />
+      <origin xyz="0 0 0" rpy="0 -0 0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+
+  <link name="TOHKU_TIP_01">
+    <visual>
+      <origin rpy="${-M_PI/2} ${-M_PI/2} 0"/>
+      <material name="tohku_tip_color"/>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/tohku_hand_tip.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="${-M_PI/2} ${-M_PI/2} 0"/>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/tohku_hand_tip.stl"/>
+      </geometry>      
+    </collision>
+    <inertial>
+      <mass value="1e-06" />
+      <origin xyz="0 0 0" rpy="0 -0 0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+
+  
+  <link name="TOHKU_TIP_02">
+    <visual>
+      <origin rpy="${-M_PI/2} ${-M_PI/2} 0"/>
+      <material name="tohku_tip_color"/>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/tohku_hand_tip.stl"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="${-M_PI/2} ${-M_PI/2} 0"/>
+      <geometry>
+        <mesh filename="package://double_arm_v7_rtr_description/meshes/tohku_hand_tip.stl"/>
+      </geometry>      
+    </collision>
+    <inertial>
+      <mass value="1e-06" />
+      <origin xyz="0 0 0" rpy="0 -0 0" />
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+    </inertial>
+  </link>
+
+  <!-- Joint -->
+  <joint name="MFRAME" type="revolute">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0" />
+    <axis xyz="0 0 1" />
+    <parent link="TFRAME" />
+    <child link="MFRAME" />
+    <limit lower="-11.9991386075" upper="11.9991386075" effort="12000.0" velocity="180.0" />
+  </joint>
+  <xacro:joint_trans_v0 name="MFRAME"/>
+  <joint name="BLOCK" type="revolute">
+    <origin xyz="0.845 -0.11 0.192" rpy="0.0 -0.0 0.0" />
+    <axis xyz="0 0 1" />
+    <parent link="MFRAME" />
+    <child link="BLOCK" />
+    <limit lower="-0.837758040957" upper="1.21300383014" effort="12000.0" velocity="1146.0" />
+  </joint>
+  <xacro:joint_trans_v0 name="BLOCK"/>
+  <joint name="BOOM" type="revolute">
+    <origin xyz="0.0700000000000004 1.5265566588595902e-16 0.20000000000000012" rpy="1.57079632679 8.65956056235e-17 3.14159265359" />
+    <axis xyz="0 0 1" />
+    <parent link="BLOCK" />
+    <child link="BOOM" />
+    <limit lower="-1.31074226825" upper="0.928515162061" effort="15000.0" velocity="1146.0" />
+  </joint>
+  <xacro:joint_trans_v0 name="BOOM"/>
+  <joint name="ARM" type="revolute">
+    <origin xyz="-1.7599999999999993 5.551115123125783e-16 -9.71445146547012e-17" rpy="0.0 -0.0 0.0" />
+    <axis xyz="0 0 1" />
+    <parent link="BOOM" />
+    <child link="ARM" />
+    <limit lower="0.535816080362" upper="2.65464579228" effort="12000.0" velocity="1146.0" />
+  </joint>
+  <xacro:joint_trans_v0 name="ARM"/>
+  <joint name="TOHKU_PITCH" type="revolute">
+    <origin xyz="-0.9649999999999999 1.6653345369377348e-16 -5.551115123125783e-17" rpy="1.57079632679 -1.11022302463e-16 1.57079632679" />
+    <axis xyz="0 1 0" />
+    <parent link="ARM" />
+    <child link="TOHKU_PITCH" />
+    <limit lower="-0.588175957922" upper="1.57079632679" effort="10000.0" velocity="5730.0" />
+  </joint>
+  <xacro:joint_trans_v0 name="TOHKU_ROLL"/>
+  <joint name="TOHKU_ROLL" type="revolute">
+    <origin xyz="9.992007221626409e-16 1.3183898417423734e-15 -0.22699999999999942" rpy="0.0 -0.0 0.0" />
+    <axis xyz="0 0 1" />
+    <parent link="TOHKU_PITCH" />
+    <child link="TOHKU_ROLL" />
+    <limit lower="-3.14159265359" upper="3.14159265359" effort="10000.0" velocity="573.0" />
+  </joint>
+  <xacro:joint_trans_v0 name="TOHKU_PITCH"/>
+  <joint name="TOHKU_TIP_01" type="revolute">
+    <origin xyz="9.992007221626409e-16 -7.077671781985373e-16 -0.3089999999999997" rpy="0.0 -0.0 0.0" />
+    <axis xyz="0 1 0" />
+    <parent link="TOHKU_ROLL" />
+    <child link="TOHKU_TIP_01" />
+    <limit lower="-0.349065850399" upper="0.0" effort="10000.0" velocity="573.0" />
+  </joint>
+  <xacro:joint_trans_v0 name="TOHKU_TIP_01"/>
+  <joint name="TOHKU_TIP_02" type="revolute">
+    <origin xyz="9.992007221626409e-16 -7.077671781985373e-16 -0.3089999999999997" rpy="0.0 -0.0 3.14159265359" />
+    <axis xyz="0 1 0" />
+    <parent link="TOHKU_ROLL" />
+    <child link="TOHKU_TIP_02" />
+    <limit lower="-0.349065850399" upper="0.0" effort="10000.0" velocity="573.0" />
+  </joint>
+  <xacro:joint_trans_v0 name="TOHKU_TIP_02"/>
+  
+</robot>

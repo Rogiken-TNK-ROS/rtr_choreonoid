@@ -21,11 +21,13 @@ items:
         jointDisplacements: [ 
            22.431298, -43.674166, -75.099985,  152.100012,  0.000000,  5.820850, -20.000009, -20.000009, -0.000000, -0.000000, 
            0.000000,  0.000000, -0.000000, -0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
-           0.000000,  0.000000,  0.000000,  0.000000 ]
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000 ]
         jointPositions: [ 
            0.391500, -0.762258, -1.310742,  2.654646,  0.000000,  0.101593, -0.349066, -0.349066, -0.000000, -0.000000, 
            0.000000,  0.000000, -0.000000, -0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
-           0.000000,  0.000000,  0.000000,  0.000000 ]
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000 ]
         initialRootPosition: [ 1, 0.0037, 0.5376 ]
         initialRootAttitude: [ 
           1, 0, 0, 
@@ -34,7 +36,8 @@ items:
         initialJointPositions: [ 
            0.391500, -0.762258, -1.310742,  2.654646,  0.000000,  0.101593, -0.349066, -0.349066, -0.000000, -0.000000, 
            0.000000,  0.000000, -0.000000, -0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
-           0.000000,  0.000000,  0.000000,  0.000000 ]
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000 ]
         zmp: [ 0, 0, 0 ]
         collisionDetection: true
         selfCollisionDetection: true
@@ -42,20 +45,6 @@ items:
       children: 
         - 
           id: 2
-          name: "DiffDriveController"
-          plugin: Body
-          class: SimpleControllerItem
-          isChecked: true
-          data: 
-            isNoDelayMode: false
-            controllerOptions: ""
-            controller: "DArmV7RTR_DiffDriveController.so"
-            baseDirectory: "Controller directory"
-            reloading: false
-            exportSymbols: false
-            isOldTargetVariableMode: false
-        - 
-          id: 3
           name: "BodyRos"
           plugin: RosBody
           class: BodyRosItem
@@ -63,7 +52,7 @@ items:
           data: 
             jointStateUpdateRate: 100
         - 
-          id: 4
+          id: 3
           name: "BodyTrackingCamera"
           plugin: Body
           class: BodyTrackingCameraItem
@@ -75,6 +64,20 @@ items:
             nearClipDistance: 0.05
             farClipDistance: 200
             fieldOfView: 0.785398
+        - 
+          id: 4
+          name: "choreonoid_ros_control"
+          plugin: Body
+          class: SimpleControllerItem
+          isChecked: true
+          data: 
+            isNoDelayMode: false
+            controllerOptions: ""
+            controller: "choreonoid_ros_control.so"
+            baseDirectory: "Controller directory"
+            reloading: false
+            exportSymbols: false
+            isOldTargetVariableMode: false
 views: 
   - 
     id: 0
@@ -149,7 +152,7 @@ views:
         - 
           camera: BodyTrackingCamera
           isCurrent: true
-          eye: [ -4.56543808, -2.27193575, 3.07272763 ]
+          eye: [ -3.26354276, -1.85195117, 2.66251184 ]
           direction: [ 0.911599433, 0.294077183, -0.287236983 ]
           up: [ 0.273364786, 0.0881860424, 0.957859549 ]
       backgroundColor: [ 0.100000001, 0.100000001, 0.300000012 ]
@@ -215,7 +218,7 @@ views:
           isCurrent: true
         - 
           camera: BodyTrackingCamera
-          eye: [ -4.56543808, -2.27193575, 3.07272763 ]
+          eye: [ -3.26354276, -1.85195117, 2.66251184 ]
           direction: [ 0.911599433, 0.294077183, -0.287236983 ]
           up: [ 0.273364786, 0.0881860424, 0.957859549 ]
       backgroundColor: [ 0.100000001, 0.100000001, 0.300000012 ]
@@ -234,7 +237,6 @@ views:
     id: 6
     plugin: Body
     class: JointDisplacementView
-    mounted: true
     state: 
       showSelectedJoints: false
       showJointIDs: false
@@ -305,6 +307,10 @@ toolbars:
     speedScale: 1
     syncToOngoingUpdates: true
     autoExpansion: true
+  "BodyBar": 
+    current: 1
+  "LeggedBodyBar": 
+    stanceWidth: 0.15
   "KinematicsBar": 
     mode: AUTO
     enablePositionDragger: true
@@ -313,10 +319,6 @@ toolbars:
     snapDistance: 0.025
     penetrationBlockDepth: 0.0005
     lazyCollisionDetectionMode: true
-  "BodyBar": 
-    current: 1
-  "LeggedBodyBar": 
-    stanceWidth: 0.15
 Body: 
   "BodyMotionEngine": 
     updateJointVelocities: false
@@ -351,12 +353,12 @@ viewAreas:
     contents: 
       type: splitter
       orientation: horizontal
-      sizes: [ 293, 1383 ]
+      sizes: [ 440, 895 ]
       children: 
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 464, 464 ]
+          sizes: [ 466, 465 ]
           children: 
             - 
               type: pane
@@ -369,17 +371,17 @@ viewAreas:
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 663, 265 ]
+          sizes: [ 526, 405 ]
           children: 
             - 
               type: splitter
               orientation: horizontal
-              sizes: [ 610, 769 ]
+              sizes: [ 446, 445 ]
               children: 
                 - 
                   type: pane
-                  views: [ 6, 5 ]
-                  current: 6
+                  views: [ 5 ]
+                  current: 5
                 - 
                   type: pane
                   views: [ 3 ]

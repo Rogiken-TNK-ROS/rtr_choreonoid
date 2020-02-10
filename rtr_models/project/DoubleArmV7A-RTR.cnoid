@@ -66,15 +66,14 @@ items:
             fieldOfView: 0.785398
         - 
           id: 4
-          name: "DiffDriveController"
+          name: "choreonoid_ros_control"
           plugin: Body
           class: SimpleControllerItem
-          isSelected: true
           isChecked: true
           data: 
             isNoDelayMode: false
             controllerOptions: ""
-            controller: "DArmV7RTR_DiffDriveController.so"
+            controller: "choreonoid_ros_control.so"
             baseDirectory: "Controller directory"
             reloading: false
             exportSymbols: false
@@ -354,12 +353,12 @@ viewAreas:
     contents: 
       type: splitter
       orientation: horizontal
-      sizes: [ 553, 1123 ]
+      sizes: [ 440, 895 ]
       children: 
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 464, 464 ]
+          sizes: [ 466, 465 ]
           children: 
             - 
               type: pane
@@ -372,12 +371,12 @@ viewAreas:
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 524, 404 ]
+          sizes: [ 526, 405 ]
           children: 
             - 
               type: splitter
               orientation: horizontal
-              sizes: [ 560, 559 ]
+              sizes: [ 446, 445 ]
               children: 
                 - 
                   type: pane
