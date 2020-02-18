@@ -15,7 +15,7 @@ except:
 
 def loadProject(
     simulatorProjects, view, task, robotProject,
-    taskdir="WRS2019", modeldir="rtr_models",
+    taskdir="WRS2019", modeldir="rtr_choreonoid_models",
     enableMulticopterSimulation = True, enableVisionSimulation = False, targetVisionSensors = ""):
     
     projectdir = os.path.join(shareDirectory, taskdir, "project")

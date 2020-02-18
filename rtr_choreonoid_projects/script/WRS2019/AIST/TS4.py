@@ -1,3 +1,3 @@
 import WRSUtil
 WRSUtil.loadProject(
-    "AISTSimulator", "MultiSceneViews", "TS4", "DoubleArmV7S-RTR")
+    "AISTSimulator", "MultiSceneViews", "TS4", "RTRDoubleArmV7S")

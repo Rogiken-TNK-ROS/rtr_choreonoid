@@ -74,11 +74,11 @@ items:
                 antiAliasing: false
         - 
           id: 5
-          name: "DoubleArmV7S-RTR"
+          name: "RTRDoubleArmV7"
           plugin: Base
           class: SubProjectItem
           data: 
-            filename: "${SHARE}/rtr_models/project/DoubleArmV7S-RTR.cnoid"
+            filename: "${SHARE}/rtr_choreonoid_models/project/RTRDoubleArmV7S.cnoid"
             format: PROJECT
             saveMode: "Manual save"
         - 
