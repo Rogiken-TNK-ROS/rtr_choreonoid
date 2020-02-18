@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5.0)
-project(rtr_models)
+project(rtr_choreonoid_models)
 
 add_compile_options(-std=c++17)
 
@@ -15,4 +15,4 @@ endif()
 install(DIRECTORY
   model
   project
-  DESTINATION ${CHOREONOID_SHARE_SUBDIR}/rtr_models)
+  DESTINATION ${CHOREONOID_SHARE_SUBDIR}/rtr_choreonoid_models)
