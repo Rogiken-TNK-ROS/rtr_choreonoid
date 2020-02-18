@@ -1,7 +1,7 @@
 format: ChoreonoidBody
 formatVersion: 1.0
 angleUnit: degree
-name: DoubleArmV7-Upper
+name: RTRDoubleArmV7-Upper
 rootLink: TFRAME
 
 links:

@@ -1,13 +1,13 @@
 format: ChoreonoidBody
 formatVersion: 1.0
 angleUnit: degree
-name: DoubleArmV7
+name: RTRDoubleArmV7
 rootLink: TFRAME
 
 links:
   -
     type: SubBody
-    uri: DoubleArmV7-RTR-Upper.body
+    uri: RTRDoubleArmV7-Upper.body
     jointIdOffset: 0
     elements:
       -
