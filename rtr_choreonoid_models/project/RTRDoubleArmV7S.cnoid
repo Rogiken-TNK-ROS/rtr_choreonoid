@@ -9,9 +9,10 @@ items:
       name: "RTRDoubleArmV7"
       plugin: Body
       class: BodyItem
-      isChecked: true
+      is_checked: true
       data: 
-        modelFile: "${SHARE}/rtr_choreonoid_models/model/RTRDoubleArmV7/RTRDoubleArmV7S.body"
+        file: "${SHARE}/rtr_choreonoid_models/model/RTRDoubleArmV7/RTRDoubleArmV7S.body"
+        format: CHOREONOID-BODY
         currentBaseLink: "TFRAME"
         rootPosition: [ 1, 0.0037, 0.5376 ]
         rootAttitude: [ 
@@ -19,65 +20,72 @@ items:
           0, 1, 0, 
           0, 0, 1 ]
         jointDisplacements: [ 
-           22.431298, -43.674166, -75.099985,  152.100012,  0.000000,  5.820850, -20.000009, -20.000009, -0.000000, -0.000000, 
-           0.000000,  0.000000, -0.000000, -0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
-           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
-           0.000000,  0.000000 ]
+          22.4313, -43.6742, -75.1, 152.1, 0, 5.82085, -20, -20, -0, -0, 
+          0, 0, -0, -0, 0, 0, 0, 0, 0, 0, 
+          0, 0, 0, 0, 0, 0 ]
         jointPositions: [ 
-           0.391500, -0.762258, -1.310742,  2.654646,  0.000000,  0.101593, -0.349066, -0.349066, -0.000000, -0.000000, 
-           0.000000,  0.000000, -0.000000, -0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
-           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
-           0.000000,  0.000000 ]
+          0.3915, -0.762259, -1.31074, 2.65465, 0, 0.101593, -0.349066, -0.349066, -0, -0, 
+          0, 0, -0, -0, 0, 0, 0, 0, 0, 0, 
+          0, 0, 0, 0, 0, 0 ]
         initialRootPosition: [ 1, 0.0037, 0.5376 ]
         initialRootAttitude: [ 
           1, 0, 0, 
           0, 1, 0, 
           0, 0, 1 ]
         initialJointPositions: [ 
-           0.391500, -0.762258, -1.310742,  2.654646,  0.000000,  0.101593, -0.349066, -0.349066, -0.000000, -0.000000, 
-           0.000000,  0.000000, -0.000000, -0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
-           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
-           0.000000,  0.000000 ]
-        zmp: [ 0, 0, 0 ]
+          0.3915, -0.762259, -1.31074, 2.65465, 0, 0.101593, -0.349066, -0.349066, -0, -0, 
+          0, 0, -0, -0, 0, 0, 0, 0, 0, 0, 
+          0, 0, 0, 0, 0, 0 ]
+        staticModel: false
         collisionDetection: true
         selfCollisionDetection: true
-        isSceneBodyDraggable: true
+        location_editable: true
+        scene_sensitive: true
+        zmp: [ 0, 0, 0 ]
       children: 
         - 
           id: 2
-          name: "BodyRos"
-          plugin: RosBody
-          class: BodyRosItem
-          isChecked: true
-          data: 
-            jointStateUpdateRate: 100
-        - 
-          id: 3
           name: "BodyTrackingCamera"
           plugin: Body
-          class: BodyTrackingCameraItem
-          isChecked: true
+          class: BodySyncCameraItem
+          is_checked: true
           data: 
-            targetLink: ""
-            keepRelativeAttitude: false
-            cameraType: "Perspective"
-            nearClipDistance: 0.05
-            farClipDistance: 200
-            fieldOfView: 0.785398
+            target_link: ""
+            parallel_tracking: true
+            interactive_viewpoint_change: true
+            camera_type: Perspective
+            near_clip_distance: 0.05
+            far_clip_distance: 200
+            field_of_view: 0.785398
+            translation: [ -3.26354, -1.85195, 2.66251 ]
+            rotation: [ 0.634012, -0.461656, -0.620405, 99.1361 ]
+            local_translation: [ -4.26354, -1.85565, 2.12491 ]
+            local_rotation: [ 0.634012, -0.461656, -0.620405, 99.1361 ]
+        - 
+          id: 3
+          name: "WorldROS"
+          plugin: ROS
+          class: WorldROSItem
+          is_checked: true
+          data: 
+            max_clock_publishing_rate: 100
         - 
           id: 4
-          name: "choreonoid_ros_control"
-          plugin: Body
-          class: SimpleControllerItem
-          isChecked: true
+          name: "BodyROS"
+          plugin: ROS
+          class: BodyROSItem
+          is_checked: true
           data: 
-            isNoDelayMode: false
-            controllerOptions: ""
-            controller: "choreonoid_ros_control.so"
-            baseDirectory: "Controller directory"
-            reloading: false
-            exportSymbols: false
-            isOldTargetVariableMode: false
+            body_ros_version: 0
+            joint_state_update_rate: 100
+        - 
+          id: 5
+          name: "ROSControl"
+          plugin: ROS
+          class: ROSControlItem
+          is_checked: true
+          data: 
+            name space: RTRDoubleArmV7
 views: 
   - 
     id: 0
@@ -94,21 +102,32 @@ views:
   - 
     id: 2
     plugin: Base
+    class: LocationView
+    state: 
+      show_rpy: true
+      unique_rpy: false
+      show_quoternion: false
+      show_rotation_matrix: false
+      coordinate: parent
+  - 
+    id: 3
+    plugin: Base
     class: MessageView
     mounted: true
   - 
-    id: 3
+    id: 4
     plugin: Base
     class: SceneView
     mounted: true
     state: 
       editMode: false
-      viewpointControlMode: thirdPerson
+      viewpointOperationMode: thirdPerson
+      visible_polygon_elements: [ face ]
+      highlighting: false
       collisionLines: false
-      polygonMode: fill
       restrictCameraRoll: true
       verticalAxis: Z
-      lightingMode: full
+      lightingMode: normal
       cullingMode: enabled
       defaultHeadLight: true
       defaultHeadLightIntensity: 0.75
@@ -142,8 +161,8 @@ views:
           near: 0.04
           far: 200
           eye: [ 4, 2, 1.5 ]
-          direction: [ -0.888888889, -0.444444444, -0.111111111 ]
-          up: [ -0.0993807989, -0.0496903995, 0.99380799 ]
+          direction: [ -0.888889, -0.444444, -0.111111 ]
+          up: [ -0.0993807, -0.0496904, 0.993808 ]
         - 
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -152,27 +171,25 @@ views:
         - 
           camera: BodyTrackingCamera
           isCurrent: true
-          eye: [ -3.26354276, -1.85195117, 2.66251184 ]
-          direction: [ 0.911599433, 0.294077183, -0.287236983 ]
-          up: [ 0.273364786, 0.0881860424, 0.957859549 ]
-      backgroundColor: [ 0.100000001, 0.100000001, 0.300000012 ]
-      gridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
-      xzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
-      yzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
+      backgroundColor: [ 0.1, 0.1, 0.3 ]
+      gridColor: [ 0.9, 0.9, 0.9, 1 ]
+      xzgridColor: [ 0.9, 0.9, 0.9, 1 ]
+      yzgridColor: [ 0.9, 0.9, 0.9, 1 ]
       isDedicatedItemCheckEnabled: false
   - 
-    id: 4
+    id: 5
     name: "Camera Scene"
     plugin: Base
     class: SceneView
     state: 
       editMode: false
-      viewpointControlMode: thirdPerson
+      viewpointOperationMode: thirdPerson
+      visible_polygon_elements: [ face ]
+      highlighting: false
       collisionLines: false
-      polygonMode: fill
       restrictCameraRoll: true
       verticalAxis: Z
-      lightingMode: full
+      lightingMode: normal
       cullingMode: enabled
       defaultHeadLight: true
       defaultHeadLightIntensity: 0.75
@@ -206,8 +223,8 @@ views:
           near: 0.04
           far: 200
           eye: [ 4, 2, 1.5 ]
-          direction: [ -0.888888889, -0.444444444, -0.111111111 ]
-          up: [ -0.0993807989, -0.0496903995, 0.99380799 ]
+          direction: [ -0.888889, -0.444444, -0.111111 ]
+          up: [ -0.0993807, -0.0496904, 0.993808 ]
         - 
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -216,54 +233,82 @@ views:
         - 
           camera: [ RTRDoubleArmV7, FRAME_FRONT_CAMERA ]
           isCurrent: true
-        - 
-          camera: BodyTrackingCamera
-          eye: [ -3.26354276, -1.85195117, 2.66251184 ]
-          direction: [ 0.911599433, 0.294077183, -0.287236983 ]
-          up: [ 0.273364786, 0.0881860424, 0.957859549 ]
-      backgroundColor: [ 0.100000001, 0.100000001, 0.300000012 ]
-      gridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
-      xzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
-      yzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
+      backgroundColor: [ 0.1, 0.1, 0.3 ]
+      gridColor: [ 0.9, 0.9, 0.9, 1 ]
+      xzgridColor: [ 0.9, 0.9, 0.9, 1 ]
+      yzgridColor: [ 0.9, 0.9, 0.9, 1 ]
       isDedicatedItemCheckEnabled: false
   - 
-    id: 5
+    id: 6
     plugin: Body
     class: BodyLinkView
     mounted: true
     state: 
       showRotationMatrix: false
   - 
-    id: 6
+    id: 7
     plugin: Body
     class: JointDisplacementView
     state: 
-      showSelectedJoints: false
-      showJointIDs: false
-      showJointNames: true
-      overlapJointNames: false
-      showSliders: true
-      showDials: false
-      showPhases: false
-      currentBodyItem: 1
-  - 
-    id: 7
-    plugin: Body
-    class: LinkSelectionView
-    mounted: true
-    state: 
-      listingMode: "Link List"
-      currentBodyItem: 1
-      bodyItems: 
-        - 
-          id: 1
-          selectedLinks: [ 0 ]
+      show_selected_joints: false
+      show_joint_ids: true
+      show_joint_names: false
+      overlap_joint_names: false
+      show_sliders: true
+      show_dials: false
+      show_phases: true
   - 
     id: 8
+    plugin: Body
+    class: LinkDeviceListView
+    mounted: true
+    state: 
+      element_type: link
+      listingMode: list
+  - 
+    id: 9
+    plugin: Body
+    class: LinkPositionView
+    state: 
+      coordinate_mode: world
+      preferred_coordinate_mode: base
+      show_rpy: true
+      unique_rpy: false
+      show_quoternion: false
+      show_rotation_matrix: false
+      target_link_type: ik_link
+  - 
+    id: 10
+    plugin: Body
+    class: LinkPropertyView
+  - 
+    id: 11
     plugin: Python
     class: PythonConsoleView
     mounted: true
 toolbars: 
+  "TimeBar": 
+    minTime: 0
+    maxTime: 30
+    frameRate: 1000
+    playbackFrameRate: 60
+    idleLoopDrivenMode: false
+    currentTime: 0
+    speedScale: 1
+    syncToOngoingUpdates: true
+    autoExpansion: true
+  "LeggedBodyBar": 
+    stanceWidth: 0.15
+  "KinematicsBar": 
+    forward_kinematics: true
+    inverse_kinematics: true
+    preset_kinematics: true
+    enablePositionDragger: true
+    penetrationBlock: false
+    collisionLinkHighlight: false
+    snapDistance: 0.025
+    penetrationBlockDepth: 0.0005
+    lazyCollisionDetectionMode: true
   "BodyMotionGenerationBar": 
     autoGenerationForNewBody: true
     balancer: false
@@ -297,41 +342,19 @@ toolbars:
     waistHeightRelaxation: false
     gravity: 9.8
     dynamicsTimeRatio: 1
-  "TimeBar": 
-    minTime: 0
-    maxTime: 30
-    frameRate: 1000
-    playbackFrameRate: 60
-    idleLoopDrivenMode: false
-    currentTime: 0
-    speedScale: 1
-    syncToOngoingUpdates: true
-    autoExpansion: true
-  "BodyBar": 
-    current: 1
-  "LeggedBodyBar": 
-    stanceWidth: 0.15
-  "KinematicsBar": 
-    mode: AUTO
-    enablePositionDragger: true
-    penetrationBlock: false
-    collisionLinkHighlight: false
-    snapDistance: 0.025
-    penetrationBlockDepth: 0.0005
-    lazyCollisionDetectionMode: true
 Body: 
   "BodyMotionEngine": 
     updateJointVelocities: false
   "BodySelectionManager": 
-    currentBodyItem: 1
-    currentLink: "TFRAME"
+    current_body_item: 1
+    current_link: "TFRAME"
   "EditableSceneBody": 
     editableSceneBodies: 
       - 
         bodyItem: 1
-        showCenterOfMass: false
-        showPpcom: false
-        showZmp: false
+        show_cm: false
+        show_cm_projection: false
+        show_zmp: false
   "KinematicFaultChecker": 
     checkJointPositions: true
     angleMargin: 0
@@ -353,43 +376,40 @@ viewAreas:
     contents: 
       type: splitter
       orientation: horizontal
-      sizes: [ 440, 895 ]
+      sizes: [ 631, 1285 ]
       children: 
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 466, 465 ]
+          sizes: [ 463, 462 ]
           children: 
             - 
               type: pane
               views: [ 1 ]
-              current: 1
             - 
               type: pane
-              views: [ 0, 7 ]
+              views: [ 0, 8 ]
               current: 0
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 526, 405 ]
+          sizes: [ 523, 402 ]
           children: 
             - 
               type: splitter
               orientation: horizontal
-              sizes: [ 446, 445 ]
+              sizes: [ 641, 640 ]
               children: 
                 - 
                   type: pane
-                  views: [ 5 ]
-                  current: 5
+                  views: [ 6 ]
                 - 
                   type: pane
-                  views: [ 3 ]
-                  current: 3
+                  views: [ 4 ]
             - 
               type: pane
-              views: [ 2, 8 ]
-              current: 2
+              views: [ 3, 11 ]
+              current: 3
 layoutOfToolBars: 
   rows: 
     - 
