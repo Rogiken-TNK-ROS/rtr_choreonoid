@@ -1,0 +1,13 @@
+<launch>
+  <arg name="project_file" default="WRS2019/AIST/TS1.cnoid"/>
+  <arg name="model_file" default="RTRDoubleArmV7S.urdf.xacro"/>
+  <param name="use_sim_time" value="true"/>
+
+  <!-- robot description -->
+  <param name="RTRDoubleArmV7/robot_description" command="$(find xacro)/xacro --inorder '$(find rtr_double_arm_v7_description)/urdf/$(arg model_file)'"/>
+  
+  <!-- Choreonoid ROS -->
+  <include file="$(find choreonoid_ros)/launch/choreonoid.launch">
+    <arg name="choreonoid_arg" value="$(find rtr_choreonoid_projects)/project/$(arg project_file)"/>
+  </include>
+</launch>
