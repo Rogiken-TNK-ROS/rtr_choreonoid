@@ -840,10 +840,10 @@ links:
               1.2268932e-3, -7.1011455e-4,  1.8011625e-1 ]
           -
             type: Visual
-            resource: { uri: "prt/RTRTip/rtr_tip_01.wrl" }
+            resource: { uri: "prt/tohku_hand_tip.wrl" }
           - 
             type: Collision
-            elements: &RTR_TIP_01_COLLISION_MODEL
+            elements: &TOHKU_TIP_COLLISION_MODEL
               -
                 type: Shape
                 rotation: [ 1, 0, 0, 90 ]
@@ -933,19 +933,19 @@ links:
                 geometry: { type: Box, size: [ 0.0700, 0.018222, 0.025 ] }
               -
                 type: Shape
-                translation: [ -0.341837, 0.120326, 0.0 ]
-                rotation: [ 0, 0, 1, -58.21 ]
-                geometry: { type: Box, size: [ 0.0700, 0.027707, 0.025 ] }
+                translation: [ -0.341837, 0.120826, 0.0 ]
+                rotation: [ 0, 0, 1, -60.21 ]
+                geometry: { type: Box, size: [ 0.0700, 0.016707, 0.025 ] }
               -
                 type: Shape
                 translation: [ -0.340229, 0.127727, 0.0 ]
-                rotation: [ 0, 0, 1, 129.00 ]
+                rotation: [ 0, 0, 1, 129.20 ]
                 geometry: { type: Box, size: [ 0.0700, 0.018195, 0.025 ] }
               -
                 type: Shape
-                translation: [ -0.362766, 0.097069, 0.0 ]
-                rotation: [ 0, 0, 1, -43.48 ]
-                geometry: { type: Box, size: [ 0.0600, 0.020729, 0.025 ] }
+                translation: [ -0.355766, 0.106069, 0.0 ]
+                rotation: [ 0, 0, 1, -54.98 ]
+                geometry: { type: Box, size: [ 0.0600, 0.016729, 0.025 ] }
               -
                 type: Shape
                 translation: [ -0.354984, 0.121243, 0.0 ]
@@ -958,9 +958,9 @@ links:
                 geometry: { type: Box, size: [ 0.0600, 0.018233, 0.025 ] }
               -
                 type: Shape
-                translation: [ -0.377788, 0.079015, 0.0 ]
-                rotation: [ 0, 0, 1, -35.36 ]
-                geometry: { type: Box, size: [ 0.0600, 0.028736, 0.025 ] }
+                translation: [ -0.371288, 0.094015, 0.0 ]
+                rotation: [ 0, 0, 1, -49.36 ]
+                geometry: { type: Box, size: [ 0.0600, 0.016736, 0.025 ] }
               -
                 type: Shape
                 translation: [ -0.375027, 0.097669, 0.0 ]
@@ -968,9 +968,9 @@ links:
                 geometry: { type: Box, size: [ 0.0600, 0.018228, 0.025 ] }
               -
                 type: Shape
-                translation: [ -0.385947, 0.052051, 0.0 ]
-                rotation: [ 0, 0, 1, -19.79 ]
-                geometry: { type: Box, size: [ 0.0500, 0.028762, 0.025 ] }
+                translation: [ -0.381947, 0.077051, 0.0 ]
+                rotation: [ 0, 0, 1, -43.79 ]
+                geometry: { type: Box, size: [ 0.0500, 0.016762, 0.025 ] }
               -
                 type: Shape
                 translation: [ -0.387686, 0.087123, 0.0 ]
@@ -983,9 +983,9 @@ links:
                 geometry: { type: Box, size: [ 0.0500, 0.018257, 0.025 ] }
               -
                 type: Shape
-                translation: [ -0.392047, 0.027051, 0.0 ]
-                rotation: [ 0, 0, 1, -9.79 ]
-                geometry: { type: Box, size: [ 0.0500, 0.023762, 0.025 ] }
+                translation: [ -0.394503, 0.062602, 0.0 ]
+                rotation: [ 0, 0, 1, -38.18 ]
+                geometry: { type: Box, size: [ 0.0500, 0.016664, 0.025 ] }
               -
                 type: Shape
                 translation: [ -0.400895, 0.058266, 0.0 ]
@@ -993,9 +993,19 @@ links:
                 geometry: { type: Box, size: [ 0.0500, 0.018216, 0.025 ] }
               -
                 type: Shape
+                translation: [ -0.401354, 0.044395, 0.0 ]
+                rotation: [ 0, 0, 1, -32.84 ]
+                geometry: { type: Box, size: [ 0.0400, 0.016782, 0.025 ] }
+              -
+                type: Shape
                 translation: [ -0.410367, 0.044122, 0.0 ]
                 rotation: [ 0, 0, 1, -14.26 ]
                 geometry: { type: Box, size: [ 0.0400, 0.018263, 0.025 ] }
+              -
+                type: Shape
+                translation: [ -0.410692, 0.028331, 0.0 ]
+                rotation: [ 0, 0, 1, 152.51 ]
+                geometry: { type: Box, size: [ 0.0400, 0.016683, 0.025 ] }
               -
                 type: Shape
                 translation: [ -0.413705, 0.028019, 0.0 ]
@@ -1003,80 +1013,9 @@ links:
                 geometry: { type: Box, size: [ 0.0400, 0.018232, 0.025 ] }
               -
                 type: Shape
-                translation: [ -0.393447, 0.014051, 0.0 ]
-                rotation: [ 0, 0, 1, -4.79 ]
-                geometry: { type: Box, size: [ 0.0500, 0.020262, 0.025 ] }
-              -
-                type: Shape
-                translation: [ -0.414805, 0.014019, 0.0 ]
-                rotation: [ 0, 0, 1, 0 ]
-                geometry: { type: Box, size: [ 0.0400, 0.023232, 0.025 ] }
-              -
-                type: Shape
-                translation: [ -0.373947, 0.002151, 0.0 ]
-                rotation: [ 0, 0, 1, -18 ]
-                geometry: { type: Box, size: [ 0.0090, 0.00202, 0.025 ] }
-              -
-                type: Shape
-                translation: [ -0.381947, 0.002151, 0.0 ]
-                rotation: [ 0, 0, 1, 18 ]
-                geometry: { type: Box, size: [ 0.0090, 0.00182, 0.025 ] }
-              -
-                type: Shape
-                translation: [ -0.389947, 0.002151, 0.0 ]
-                rotation: [ 0, 0, 1, -18 ]
-                geometry: { type: Box, size: [ 0.0090, 0.00182, 0.025 ] }
-              -
-                type: Shape
-                translation: [ -0.397947, 0.002151, 0.0 ]
-                rotation: [ 0, 0, 1, 18 ]
-                geometry: { type: Box, size: [ 0.0090, 0.00182, 0.025 ] }
-              -
-                type: Shape
-                translation: [ -0.405947, 0.002151, 0.0 ]
-                rotation: [ 0, 0, 1, -18 ]
-                geometry: { type: Box, size: [ 0.0090, 0.00182, 0.025 ] }
-              -
-                type: Shape
-                translation: [ -0.413947, 0.002151, 0.0 ]
-                rotation: [ 0, 0, 1, 18 ]
-                geometry: { type: Box, size: [ 0.0090, 0.00182, 0.025 ] }
-              -
-                type: Shape
-                translation: [ -0.421947, 0.002151, 0.0 ]
-                rotation: [ 0, 0, 1, -18 ]
-                geometry: { type: Box, size: [ 0.0090, 0.00182, 0.025 ] }
-              -
-                type: Shape
-                translation: [ -0.429947, 0.002151, 0.0 ]
-                rotation: [ 0, 0, 1, 18 ]
-                geometry: { type: Box, size: [ 0.0090, 0.00202, 0.025 ] }
-              -
-                type: Shape
-                translation: [ -0.422205, 0.004019, 0.0 ]
-                rotation: [ 0, 0, 1, 4 ]
-                geometry: { type: Box, size: [ 0.02500, 0.002832, 0.025 ] }
-              -
-                type: Shape
-                translation: [ -0.392205, 0.004019, 0.0 ]
-                rotation: [ 0, 0, 1, -4 ]
-                geometry: { type: Box, size: [ 0.02000, 0.002832, 0.025 ] }
-              -
-                type: Shape
-                translation: [ -0.417705, 0.005519, 0.0]
+                translation: [ -0.415, 0.020, 0.0 ]
                 rotation: [ 1, 0, 0, 90 ]
-                geometry: { type: Cylinder, radius: 0.005, height: 0.025 }
-              -
-                type: Shape
-                translation: [ -0.401705, 0.005519, 0.0]
-                rotation: [ 1, 0, 0, 90 ]
-                geometry: { type: Cylinder, radius: 0.005, height: 0.025 }
-              -
-                type: Shape
-                translation: [ -0.385705, 0.005519, 0.0]
-                rotation: [ 1, 0, 0, 90 ]
-                geometry: { type: Cylinder, radius: 0.005, height: 0.025 }
-
+                geometry: { type: Cylinder, radius: 0.020, height: 0.025 }
   -
     name: TOHKU_TIP_02
     parent: TOHKU_ROLL
@@ -1105,248 +1044,10 @@ links:
               1.2268932e-3,  -7.1011455e-4, 1.8011625e-1 ]
           -
             type: Visual
-            resource: { uri: "prt/RTRTip/rtr_tip_01.wrl" }
+            resource: { uri: "prt/tohku_hand_tip.wrl" }
           -
             type: Collision
-            elements: *RTR_TIP_01_COLLISION_MODEL
-            # elements: &RTR_TIP_02_COLLISION_MODEL
-              # -
-              #   type: Shape
-              #   rotation: [ 1, 0, 0, 90 ]
-              #   geometry: { type: Cylinder, radius: 0.05, height: 0.025 }
-              # -
-              #   type: Shape
-              #   translation: [ -0.067982, 0.067942, 0.0 ]
-              #   rotation: [ 0, 0, 1, 45.0 ]
-              #   geometry: { type: Box, size: [ 0.10, 0.192262, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.075, 0.140, 0.0 ]
-              #   geometry: { type: Box, size: [ 0.060, 0.080, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.062071, 0.182929, 0.0 ]
-              #   rotation: [ 0, 0, 1, 45.0 ]
-              #   geometry: { type: Box, size: [ 0.020, 0.028284, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.151, 0.157, 0.0 ]
-              #   geometry: { type: Box, size: [ 0.172, 0.086, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.196060, 0.125975, 0.0 ]
-              #   rotation: [ 0, 0, 1, 78.64 ]
-              #   geometry: { type: Box, size: [ 0.0400, 0.081599, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.246106, 0.143324, 0.0 ]
-              #   rotation: [ 0, 0, 1, -87.60 ]
-              #   geometry: { type: Box, size: [ 0.0600, 0.016715, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.243883, 0.169629, 0.0 ]
-              #   rotation: [ 0, 0, 1, 92.52 ]
-              #   geometry: { type: Box, size: [ 0.0600, 0.018218, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.266990, 0.151471, 0.0 ]
-              #   rotation: [ 0, 0, 1, -82.11 ]
-              #   geometry: { type: Box, size: [ 0.0800, 0.016759, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.257877, 0.158326, 0.0 ]
-              #   rotation: [ 0, 0, 1, 97.86 ]
-              #   geometry: { type: Box, size: [ 0.0800, 0.018272, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.287032, 0.147755, 0.0 ]
-              #   rotation: [ 0, 0, 1, -76.88 ]
-              #   geometry: { type: Box, size: [ 0.0800, 0.016737, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.272322, 0.155671, 0.0 ]
-              #   rotation: [ 0, 0, 1, 102.97 ]
-              #   geometry: { type: Box, size: [ 0.0800, 0.018266, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.306936, 0.142050, 0.0 ]
-              #   rotation: [ 0, 0, 1, -71.13 ]
-              #   geometry: { type: Box, size: [ 0.0800, 0.016697, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.286135, 0.151775, 0.0 ]
-              #   rotation: [ 0, 0, 1, 108.53 ]
-              #   geometry: { type: Box, size: [ 0.0800, 0.018246, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.300014, 0.146468, 0.0 ]
-              #   rotation: [ 0, 0, 1, 113.32 ]
-              #   geometry: { type: Box, size: [ 0.0800, 0.018186, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.323939, 0.129956, 0.0 ]
-              #   rotation: [ 0, 0, 1, -65.73 ]
-              #   geometry: { type: Box, size: [ 0.0700, 0.016784, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.315333, 0.144532, 0.0 ]
-              #   rotation: [ 0, 0, 1, 118.81 ]
-              #   geometry: { type: Box, size: [ 0.0700, 0.018260, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.328159, 0.136697, 0.0 ]
-              #   rotation: [ 0, 0, 1, 124.04 ]
-              #   geometry: { type: Box, size: [ 0.0700, 0.018222, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.341837, 0.120326, 0.0 ]
-              #   rotation: [ 0, 0, 1, -58.21 ]
-              #   geometry: { type: Box, size: [ 0.0700, 0.027707, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.340229, 0.127727, 0.0 ]
-              #   rotation: [ 0, 0, 1, 129.00 ]
-              #   geometry: { type: Box, size: [ 0.0700, 0.018195, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.362766, 0.097069, 0.0 ]
-              #   rotation: [ 0, 0, 1, -43.48 ]
-              #   geometry: { type: Box, size: [ 0.0600, 0.020729, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.354984, 0.121243, 0.0 ]
-              #   rotation: [ 0, 0, 1, -45.66 ]
-              #   geometry: { type: Box, size: [ 0.0600, 0.018315, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.365530, 0.109935, 0.0 ]
-              #   rotation: [ 0, 0, 1, 139.67 ]
-              #   geometry: { type: Box, size: [ 0.0600, 0.018233, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.377788, 0.079015, 0.0 ]
-              #   rotation: [ 0, 0, 1, -35.36 ]
-              #   geometry: { type: Box, size: [ 0.0600, 0.028736, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.375027, 0.097669, 0.0 ]
-              #   rotation: [ 0, 0, 1, 144.83 ]
-              #   geometry: { type: Box, size: [ 0.0600, 0.018228, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.385947, 0.052051, 0.0 ]
-              #   rotation: [ 0, 0, 1, -19.79 ]
-              #   geometry: { type: Box, size: [ 0.0500, 0.028762, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.387686, 0.087123, 0.0 ]
-              #   rotation: [ 0, 0, 1, 150.06 ]
-              #   geometry: { type: Box, size: [ 0.0500, 0.018233, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.394969, 0.072993, 0.0 ]
-              #   rotation: [ 0, 0, 1, 155.40 ]
-              #   geometry: { type: Box, size: [ 0.0500, 0.018257, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.392047, 0.027051, 0.0 ]
-              #   rotation: [ 0, 0, 1, -9.79 ]
-              #   geometry: { type: Box, size: [ 0.0500, 0.023762, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.400895, 0.058266, 0.0 ]
-              #   rotation: [ 0, 0, 1, -19.23 ]
-              #   geometry: { type: Box, size: [ 0.0500, 0.018216, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.410367, 0.044122, 0.0 ]
-              #   rotation: [ 0, 0, 1, -14.26 ]
-              #   geometry: { type: Box, size: [ 0.0400, 0.018263, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.413705, 0.028019, 0.0 ]
-              #   rotation: [ 0, 0, 1, -9.15 ]
-              #   geometry: { type: Box, size: [ 0.0400, 0.019232, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.393447, 0.014051, 0.0 ]
-              #   rotation: [ 0, 0, 1, -4.79 ]
-              #   geometry: { type: Box, size: [ 0.0500, 0.020262, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.414805, 0.014019, 0.0 ]
-              #   rotation: [ 0, 0, 1, 0 ]
-              #   geometry: { type: Box, size: [ 0.0400, 0.024232, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.373947, -0.00051, 0.0 ]
-              #   rotation: [ 0, 0, 1, 18 ]
-              #   geometry: { type: Box, size: [ 0.0090, 0.00202, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.381947, 0.000051, 0.0 ]
-              #   rotation: [ 0, 0, 1, -18 ]
-              #   geometry: { type: Box, size: [ 0.0090, 0.00182, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.389947, 0.000051, 0.0 ]
-              #   rotation: [ 0, 0, 1, 18 ]
-              #   geometry: { type: Box, size: [ 0.0090, 0.00182, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.397947, 0.000051, 0.0 ]
-              #   rotation: [ 0, 0, 1, -18 ]
-              #   geometry: { type: Box, size: [ 0.0090, 0.00182, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.405947, 0.000051, 0.0 ]
-              #   rotation: [ 0, 0, 1, 18 ]
-              #   geometry: { type: Box, size: [ 0.0090, 0.00182, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.413947, 0.000051, 0.0 ]
-              #   rotation: [ 0, 0, 1, -18 ]
-              #   geometry: { type: Box, size: [ 0.0090, 0.00182, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.421947, 0.000051, 0.0 ]
-              #   rotation: [ 0, 0, 1, 18 ]
-              #   geometry: { type: Box, size: [ 0.0090, 0.00182, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.429947, 0.000051, 0.0 ]
-              #   rotation: [ 0, 0, 1, -18 ]
-              #   geometry: { type: Box, size: [ 0.0090, 0.00202, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.412205, 0.003119, 0.0 ]
-              #   rotation: [ 0, 0, 1, 0 ]
-              #   geometry: { type: Box, size: [ 0.04500, 0.004232, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.396705, 0.002819, 0.0 ]
-              #   rotation: [ 0, 0, 1, -2 ]
-              #   geometry: { type: Box, size: [ 0.05500, 0.003832, 0.025 ] }
-              # -
-              #   type: Shape
-              #   translation: [ -0.425705, 0.003519, 0.0]
-              #   rotation: [ 1, 0, 0, 90 ]
-              #   geometry: { type: Cylinder, radius: 0.005, height: 0.025 }
-              # -
-              #   type: Shape
-              #   translation: [ -0.409705, 0.003519, 0.0]
-              #   rotation: [ 1, 0, 0, 90 ]
-              #   geometry: { type: Cylinder, radius: 0.005, height: 0.025 }
-              # -
-              #   type: Shape
-              #   translation: [ -0.393705, 0.003519, 0.0]
-              #   rotation: [ 1, 0, 0, 90 ]
-              #   geometry: { type: Cylinder, radius: 0.005, height: 0.025 }
-              # -
-              #   type: Shape
-              #   translation: [ -0.377705, 0.003519, 0.0]
-              #   rotation: [ 1, 0, 0, 90 ]
-              #   geometry: { type: Cylinder, radius: 0.005, height: 0.025 }
+            elements: *TOHKU_TIP_COLLISION_MODEL
   -
     name: UFRAME
     parent: TFRAME
@@ -2132,8 +1833,8 @@ links:
     jointRange: [ -0.0507, 0 ]
     maxJointVelocity: 573
     # AGX parameters
-    jointMotorForceRange: [ -10000.0, 10000.0 ]
-    jointLockForceRange: [ -10000.0, 10000.0 ]
+    jointMotorForceRange: [ -8000.0, 8000.0 ]
+    jointLockForceRange: [ -8000.0, 8000.0 ]
     elements:
       - 
         type: ForceSensor
