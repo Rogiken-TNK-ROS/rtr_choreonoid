@@ -1374,7 +1374,7 @@ links:
               1.11603580E+00, 5.51320690E+00, 6.17888570E+01 ]
           -
             type: Resource
-            uri: "prt/frame_marge.wrl"
+            uri: "prt/frame_marge.dae"
           -
             type: Camera
             name: UF_BOTTOM_CAMERA
