@@ -78,9 +78,9 @@ items:
             fieldOfView: 0.785398
         - 
           id: 5
-          name: "BodyRos"
-          plugin: RosBody
-          class: BodyRosItem
+          name: "BodyROS"
+          plugin: ROS
+          class: BodyROSItem
           data: 
             jointStateUpdateRate: 100
 views: 
