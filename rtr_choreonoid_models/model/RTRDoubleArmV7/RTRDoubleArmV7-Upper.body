@@ -20,6 +20,166 @@ links:
         isOptional: true
         offsetTranslation: [ 0, 0, 1.2 ]
       -
+        type: Camera
+        name: Camera00
+        translation: [ 0.475, 0, 1.175 ]
+        rotation: [ [0, 1, 0, 10], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: true
+      -
+        type: Camera
+        name: Camera01
+        translation: [ 0.55, 0, 1.175 ]
+        rotation: [ [0, 1, 0, 45], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: true
+      -
+        type: Camera
+        name: Camera02
+        translation: [ 0.3358, 0.3358, 1.175 ]
+        rotation: [ [0, 0, 1, 45], [0, 1, 0, 10], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: true
+      -
+        type: Camera
+        name: Camera03
+        translation: [ 0.3889, 0.3889, 1.175 ]
+        rotation: [ [0, 0, 1, 45], [0, 1, 0, 45], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: true
+      -
+        type: Camera
+        name: Camera04
+        translation: [ 0, 0.475, 1.175 ]
+        rotation: [ [0, 0, 1, 90], [0, 1, 0, 10], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: false
+      -
+        type: Camera
+        name: Camera05
+        translation: [ 0, 0.55, 1.175 ]
+        rotation: [ [0, 0, 1, 90], [0, 1, 0, 45], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: false
+      -
+        type: Camera
+        name: Camera06
+        translation: [ -0.3358, 0.3358, 1.175 ]
+        rotation: [ [0, 0, 1, 135], [0, 1, 0, 10], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: false
+      -
+        type: Camera
+        name: Camera07
+        translation: [ -0.3889, 0.3889, 1.175 ]
+        rotation: [ [0, 0, 1, 135], [0, 1, 0, 45], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: false
+      -
+        type: Camera
+        name: Camera08
+        translation: [ -0.475, 0, 1.175 ]
+        rotation: [ [0, 0, 1, 180], [0, 1, 0, 10], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: false
+      -
+        type: Camera
+        name: Camera09
+        translation: [ -0.55, 0, 1.175 ]
+        rotation: [ [0, 0, 1, 180], [0, 1, 0, 45], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: false
+      -
+        type: Camera
+        name: Camera10
+        translation: [-0.3358, -0.3358, 1.175 ]
+        rotation: [ [0, 0, 1, 225], [0, 1, 0, 10], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: false
+      -
+        type: Camera
+        name: Camera11
+        translation: [ -0.3889, -0.3889, 1.175 ]
+        rotation: [ [0, 0, 1, 225], [0, 1, 0, 45], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: false
+      -
+        type: Camera
+        name: Camera12
+        translation: [0, -0.475, 1.175 ]
+        rotation: [ [0, 0, 1, 270], [0, 1, 0, 10], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: false
+      -
+        type: Camera
+        name: Camera13
+        translation: [0, -0.55, 1.175 ]
+        rotation: [ [0, 0, 1, 270], [0, 1, 0, 45], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: false
+      -
+        type: Camera
+        name: Camera14
+        translation: [0.3358, -0.3358, 1.175 ]
+        rotation: [ [0, 0, 1, 315], [0, 1, 0, 10], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: true
+      -
+        type: Camera
+        name: Camera15
+        translation: [0.3889, -0.3889, 1.175 ]
+        rotation: [ [0, 0, 1, 315], [0, 1, 0, 45], [1, 0, 0, 90] , [0, -1, 0, 90] ]
+        format: COLOR
+        width: 1280
+        height: 720
+        fieldOfView: 41.08
+        on: true
+      -
         type: Transform
         rotation: [ [0, 0, 1, 180 ], [ 1, 0, 0, 90 ] ]
         elements:
@@ -30,16 +190,6 @@ links:
               1.17125210E+02,  9.30859190E-01,  7.71323470E-03,
               9.30859190E-01,  2.13308730E+02,  -4.07759970E-03,
               7.71323470E-03,  -4.07759970E-03, 1.08880120E+02 ]
-          -
-            type: Camera
-            name: FRAME_FRONT_CAMERA
-            translation: [ 0.25, 1.8, 0 ]
-            rotation: [ -0.211541, 0.954201, 0.211541, 92.69 ]
-            format: COLOR
-            width: 1280
-            height: 720
-            fieldOfView: 41.08
-            on: true
           -
             type: RangeSensor
             name: Velodyne
@@ -281,61 +431,6 @@ links:
                 type: Shape
                 translation: [ -0.74, 0.192, -0.11 ]
                 geometry: { type: Box, size: [ 0.2, 0.14, 0.1 ] }
-          -
-            type: Camera
-            name: mid_RIGHT_CAMERA
-            rotation: [ -0.706785, 0.706755, 0.0308563, 7.07007 ]
-            translation: [ -0.5, 1.216, 0.0999955 ]
-            format: COLOR
-            width: 640
-            height: 360
-            fieldOfView: 96
-            farClipDistance: 5
-            on: true
-          -
-            type: Camera
-            name: mid_LEFT_CAMERA
-            rotation: [ -0.00190454, 0.999046, 0.0436175, 175.00480 ]
-            translation: [ -0.5, 1.216, 0.499996 ]
-            format: COLOR
-            width: 640
-            height: 360
-            fieldOfView: 96
-            farClipDistance: 5
-            on: camera
-          -
-            type: Camera
-            name: Mid_TOP_CAMERA
-            rotation: [ 0.250563, 0.935113, -0.250563, 93.84075 ]
-            translation: [ -0.8, 0.3, 0.25 ]
-            format: COLOR
-            width: 640
-            height: 360
-            fieldOfView: 96
-            farClipDistance: 5
-            on: true
-          -
-            type: Camera
-            name: Mid_BOTTOM_CAMERA
-            rotation: [ -0.287968, 0.913318, 0.287968, 95.18770 ]
-            translation: [ -0.7, 0.3, 0.299995 ]
-            format: COLOR
-            width: 640
-            height: 360
-            fieldOfView: 96
-            farClipDistance: 5
-            on: camera
-          -
-            type: Camera
-            name: Mid_FRONT_CAMERA
-            rotation: [ -0.0868266, 0.992433, 0.0868266, 90.43508 ]
-            translation: [ -0.8, 0.3, 0.2 ]
-            format: COLOR
-            width: 1280
-            height: 720
-            fieldOfView: 40
-            farClipDistance: 5
-            on: camera
   -
     name: BLOCK
     parent: MFRAME
@@ -714,28 +809,6 @@ links:
                 translation: [ -0.109602, 0.109602, 0.0 ]
                 rotation: [ 1, 0, 0, 90 ]
                 geometry: { type: Cylinder, radius: 0.040, height: 0.180 }
-          - 
-            type: Camera
-            name: Lower_Hand_Axial_Camera
-            rotation: [ -0.171088,  0.970288,  0.171088, 91.73 ]
-            translation: [ -0.2, 0.0, 0.20 ]
-            format: COLOR
-            width: 1280
-            height: 720
-            fieldOfView: 115.97
-            farClipDistance: 5
-            on: true
-          - 
-            type: Camera
-            name: Lower_Hand_Thrust_Camera
-            rotation: [ 0.970288, -0.171088, 0.171088, -91.73 ]
-            translation: [ -0.2, 0.0, 0.2 ]
-            format: COLOR
-            width: 1280
-            height: 720
-            fieldOfView: 115.97
-            farClipDistance: 5
-            on: true
   -
     name: TOHKU_ROLL
     parent: TOHKU_PITCH
@@ -1374,38 +1447,7 @@ links:
               1.11603580E+00, 5.51320690E+00, 6.17888570E+01 ]
           -
             type: Resource
-            uri: "prt/frame_marge.wrl"
-          -
-            type: Camera
-            name: UF_BOTTOM_CAMERA
-            translation: [ 0.5, 0.8, -0.2 ]
-            rotation: [ -0.323616, -0.889126, -0.323616, 96.72 ]
-            format: COLOR
-            width: 640
-            height: 360
-            fieldOfView: 95.91
-            on: camera
-          -
-            type: Camera
-            name: UF_TOP_CAMERA
-            translation: [ 0.5, 0.4, -0.2 ]
-            rotation: [ 0, -1, 0, 90 ]
-            format: COLOR
-            width: 640
-            height: 360
-            fieldOfView: 95.91
-            on: camera
-          -
-            type: Camera
-            name: UF_FRONT_CAMERA
-            translation: [ 0.5, 0.6, -0.2 ]
-            rotation: [ -0.171088, -0.970288, -0.171088, 91.73 ]
-            format: COLOR
-            width: 1280
-            height: 720
-            fieldOfView: 41.08
-            farClipDistance: 5
-            on: camera
+            uri: "prt/frame_marge.dae"
   -
     name: MNP_SWING
     parent: UFRAME
@@ -2008,28 +2050,6 @@ links:
                     translation: [ 0.0, 0.0, -0.3323 ]
                     rotation: [ 1, 0, 0, 90 ]
                     geometry: { type: Cylinder, radius: 0.049, height: 0.1 }
-          -
-            type: Camera
-            name: Upper_Hand_Axial_Camera
-            translation: [ -1.0, 0.0, 0.0 ]
-            rotation: [ 0, 1, 0, 90.0 ]
-            format: COLOR
-            width: 1280
-            height: 720
-            fieldOfView: 115.97
-            farClipDistance: 5
-            on: true
-          -
-            type: Camera
-            name: Upper_Hand_Thrust_Camera
-            translation: [ -1.0, 0.0, 0.0 ]
-            rotation: [ 1, 0, 0, -90.0 ]
-            format: COLOR
-            width: 1280
-            height: 720
-            fieldOfView: 115.97
-            farClipDistance: 5
-            on: true
   -
     name: HANDBASE
     parent: YAWJOINT
