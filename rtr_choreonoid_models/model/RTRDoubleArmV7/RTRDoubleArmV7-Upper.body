@@ -822,7 +822,51 @@ links:
     jointMotorForceRange: [ -10000.0, 10000.0 ]
     jointLockForceRange: [ -10000.0, 10000.0 ]
     elements:
-      Transform:
+      - 
+        type: Camera
+        name: TohokuDepthCamera00
+        translation: [0, 0.2, -0.2]
+        format: COLOR_DEPTH
+        fieldOfView: 62
+        width: 320
+        height: 240
+        frameRate: 5
+        on: false
+      - 
+        type: Camera
+        name: TohokuDepthCamera01
+        translation: [0.2, 0, -0.2]
+        rotation: [ 0, 0, 1, -90 ]
+        format: COLOR_DEPTH
+        fieldOfView: 62
+        width: 320
+        height: 240
+        frameRate: 5
+        on: false
+      - 
+        type: Camera
+        name: TohokuDepthCamera02
+        translation: [0, -0.2, -0.2]
+        rotation: [ 0, 0, 1, 180 ]
+        format: COLOR_DEPTH
+        fieldOfView: 62
+        width: 320
+        height: 240
+        frameRate: 5
+        on: false
+      - 
+        type: Camera
+        name: TohokuDepthCamera03
+        translation: [-0.2, 0, -0.2]
+        rotation: [ 0, 0, 1, 90 ]
+        format: COLOR_DEPTH
+        fieldOfView: 62
+        width: 320
+        height: 240
+        frameRate: 5
+        on: false
+      -
+        type: Transform
         rotation: [ [ 0, 0, 1, -90 ], [ 0, 1, 0, -90 ] ]
         elements:
           -
@@ -2063,6 +2107,49 @@ links:
     jointMotorForceRange: [ -8000.0, 8000.0 ]
     jointLockForceRange: [ -8000.0, 8000.0 ]
     elements:
+      - 
+        type: Camera
+        name: ManiDepthCamera00
+        translation: [0, 0.3, -0.1]
+        format: COLOR_DEPTH
+        fieldOfView: 62
+        width: 320
+        height: 240
+        frameRate: 5
+        on: false
+      - 
+        type: Camera
+        name: ManiDepthCamera01
+        translation: [0.3, 0, -0.1]
+        rotation: [ 0, 0, 1, -90 ]
+        format: COLOR_DEPTH
+        fieldOfView: 62
+        width: 320
+        height: 240
+        frameRate: 5
+        on: false
+      - 
+        type: Camera
+        name: ManiDepthCamera02
+        translation: [0, -0.3, -0.1]
+        rotation: [ 0, 0, 1, 180 ]
+        format: COLOR_DEPTH
+        fieldOfView: 62
+        width: 320
+        height: 240
+        frameRate: 5
+        on: false
+      - 
+        type: Camera
+        name: ManiDepthCamera03
+        translation: [-0.3, 0, -0.1]
+        rotation: [ 0, 0, 1, 90 ]
+        format: COLOR_DEPTH
+        fieldOfView: 62
+        width: 320
+        height: 240
+        frameRate: 5
+        on: false
       - { type: ForceSensor, name: MNP_ROLL_TORQUE, id: 9 }
       -
         type: Transform
