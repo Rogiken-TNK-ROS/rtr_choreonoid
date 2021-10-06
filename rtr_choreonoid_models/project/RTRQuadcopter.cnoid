@@ -14,7 +14,7 @@ items:
         file: "${SHARE}/rtr_choreonoid_models/model/RTRQuadcopter/quadcopter_wrs.body"
         format: CHOREONOID-BODY
         currentBaseLink: "BODY"
-        rootPosition: [ -1.55410793e-07, -1.00120746e-07, 0.114890723 ]
+        rootPosition: [ 0.2, 0, 0.2 ]
         rootAttitude: [ 
           1, -4.1549709e-06, -5.91607799e-08, 
           4.15497076e-06, 1, -2.28602061e-06, 
@@ -22,7 +22,7 @@ items:
         jointDisplacements: [ -0, 0.000229183, 0.000229183, 0.000229183, 0.000229183 ]
         initialJointDisplacements: [ 0, 0, 0, 0, 0 ]
         jointPositions: [ -0, 4e-06, 4e-06, 4e-06, 4e-06 ]
-        initialRootPosition: [ 0, 0, 0.2 ]
+        initialRootPosition: [ 0.2, 0, 0.2 ]
         initialRootAttitude: [ 
         1, 0, 0, 
         0, 1, 0, 
@@ -34,66 +34,66 @@ items:
         location_editable: true
         scene_sensitive: true
         zmp: [ 0, 0, 0 ]
-        children: 
-          - 
-            id: 2
-            name: "RTRQuadcopterController"
-            plugin: Body
-            class: SimpleControllerItem
-            data: 
-              isNoDelayMode: false
-              controllerOptions: ""
-              controller: "RTRQuadcopterController"
-              base_directory: "Controller directory"
-              reloading: false
-              export_symbols: false
-          - 
-            id: 4
-            name: "BodyTrackingCamera"
-            plugin: Body
-            class: BodySyncCameraItem
-            is_checked: true
-            data: 
-              target_link: ""
-              parallel_tracking: true
-              interactive_viewpoint_change: true
-              camera_type: Perspective
-              near_clip_distance: 0.01
-              far_clip_distance: 100
-              field_of_view: 0.785398
-              translation: [ -1.68483, -0.934988, 0.850592 ]
-              rotation: [ 0.686043, -0.410648, -0.600594, 89.8071 ]
-              local_translation: [ -1.68483, -0.93498, 0.735703 ]
-              local_rotation: [ 0.686041, -0.41065, -0.600595, 89.8071 ]
-          - 
-            id: 5
-            name: "RTRCameraController"
-            plugin: Body
-            class: SimpleControllerItem
-            is_checked: true
-            data: 
-              isNoDelayMode: false
-              controllerOptions: ""
-              controller: "RTRQuadcopterCameraController"
-              base_directory: "Controller directory"
-              reloading: false
-              export_symbols: false
-          - 
-            id: 6
-            name: "BodyROS"
-            plugin: ROS
-            class: BodyROSItem
-            is_checked: true
-            data: 
-              body_ros_version: 0
-              joint_state_update_rate: 100
-          # - 
-          #   id: 7
-          #   name: "WorldROS"
-          #   plugin: ROS
-          #   class: WorldROSItem
-          #   data: 
-          #     max_clock_publishing_rate: 100
+      children:
+        - 
+          id: 2
+          name: "RTRQuadcopterController"
+          plugin: Body
+          class: SimpleControllerItem
+          data: 
+            isNoDelayMode: false
+            controllerOptions: ""
+            controller: "RTRQuadcopterController"
+            base_directory: "Controller directory"
+            reloading: false
+            export_symbols: false
+        - 
+          id: 4
+          name: "BodyTrackingCamera"
+          plugin: Body
+          class: BodySyncCameraItem
+          is_checked: true
+          data: 
+            target_link: ""
+            parallel_tracking: true
+            interactive_viewpoint_change: true
+            camera_type: Perspective
+            near_clip_distance: 0.01
+            far_clip_distance: 100
+            field_of_view: 0.785398
+            translation: [ -1.68483, -0.934988, 0.850592 ]
+            rotation: [ 0.686043, -0.410648, -0.600594, 89.8071 ]
+            local_translation: [ -1.68483, -0.93498, 0.735703 ]
+            local_rotation: [ 0.686041, -0.41065, -0.600595, 89.8071 ]
+        - 
+          id: 5
+          name: "RTRCameraController"
+          plugin: Body
+          class: SimpleControllerItem
+          is_checked: true
+          data: 
+            isNoDelayMode: false
+            controllerOptions: ""
+            controller: "RTRQuadcopterCameraController"
+            base_directory: "Controller directory"
+            reloading: false
+            export_symbols: false
+        - 
+          id: 6
+          name: "BodyROS"
+          plugin: ROS
+          class: BodyROSItem
+          is_checked: true
+          data: 
+            body_ros_version: 0
+            joint_state_update_rate: 100
+        # - 
+        #   id: 7
+        #   name: "WorldROS"
+        #   plugin: ROS
+        #   class: WorldROSItem
+        #   data: 
+        #     max_clock_publishing_rate: 100
 views: 
   - 
     id: 0
