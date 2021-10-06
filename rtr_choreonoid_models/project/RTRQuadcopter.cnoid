@@ -1,0 +1,295 @@
+items: 
+  id: 0
+  name: "Root"
+  plugin: Base
+  class: RootItem
+  children: 
+    - 
+      id: 1
+      name: "RTRQuadcopter"
+      plugin: Body
+      class: BodyItem
+      is_checked: true
+      data: 
+        file: "${SHARE}/rtr_choreonoid_models/model/RTRQuadcopter/quadcopter_wrs.body"
+        format: CHOREONOID-BODY
+        currentBaseLink: "BODY"
+        rootPosition: [ 0.2, 0, 0.2 ]
+        rootAttitude: [ 
+          1, -4.1549709e-06, -5.91607799e-08, 
+          4.15497076e-06, 1, -2.28602061e-06, 
+          5.91702782e-08, 2.28602037e-06, 1 ]
+        jointDisplacements: [ -0, 0.000229183, 0.000229183, 0.000229183, 0.000229183 ]
+        initialJointDisplacements: [ 0, 0, 0, 0, 0 ]
+        jointPositions: [ -0, 4e-06, 4e-06, 4e-06, 4e-06 ]
+        initialRootPosition: [ 0.2, 0, 0.2 ]
+        initialRootAttitude: [ 
+        1, 0, 0, 
+        0, 1, 0, 
+        0, 0, 1 ]
+        initialJointPositions: [ 0, 0, 0, 0, 0 ]
+        staticModel: false
+        collisionDetection: true
+        selfCollisionDetection: false
+        location_editable: true
+        scene_sensitive: true
+        zmp: [ 0, 0, 0 ]
+      children:
+        - 
+          id: 2
+          name: "RTRQuadcopterController"
+          plugin: Body
+          class: SimpleControllerItem
+          data: 
+            isNoDelayMode: false
+            controllerOptions: ""
+            controller: "RTRQuadcopterController"
+            base_directory: "Controller directory"
+            reloading: false
+            export_symbols: false
+        - 
+          id: 4
+          name: "BodyTrackingCamera"
+          plugin: Body
+          class: BodySyncCameraItem
+          is_checked: true
+          data: 
+            target_link: ""
+            parallel_tracking: true
+            interactive_viewpoint_change: true
+            camera_type: Perspective
+            near_clip_distance: 0.01
+            far_clip_distance: 100
+            field_of_view: 0.785398
+            translation: [ -1.68483, -0.934988, 0.850592 ]
+            rotation: [ 0.686043, -0.410648, -0.600594, 89.8071 ]
+            local_translation: [ -1.68483, -0.93498, 0.735703 ]
+            local_rotation: [ 0.686041, -0.41065, -0.600595, 89.8071 ]
+        - 
+          id: 5
+          name: "RTRCameraController"
+          plugin: Body
+          class: SimpleControllerItem
+          is_checked: true
+          data: 
+            isNoDelayMode: false
+            controllerOptions: ""
+            controller: "RTRQuadcopterCameraController"
+            base_directory: "Controller directory"
+            reloading: false
+            export_symbols: false
+        - 
+          id: 6
+          name: "BodyROS"
+          plugin: ROS
+          class: BodyROSItem
+          is_checked: true
+          data: 
+            body_ros_version: 0
+            joint_state_update_rate: 100
+        # - 
+        #   id: 7
+        #   name: "WorldROS"
+        #   plugin: ROS
+        #   class: WorldROSItem
+        #   data: 
+        #     max_clock_publishing_rate: 100
+views: 
+  - 
+    id: 0
+    plugin: Base
+    class: ItemPropertyView
+    mounted: true
+  - 
+    id: 1
+    plugin: Base
+    class: ItemTreeView
+    mounted: true
+    state: 
+      expanded: [ 1, 2, 3, 6, 7 ]
+  - 
+    id: 2
+    plugin: Base
+    class: LocationView
+    state: 
+      show_rpy: true
+      unique_rpy: false
+      show_quoternion: false
+      show_rotation_matrix: false
+      coordinate: parent
+  - 
+    id: 3
+    plugin: Base
+    class: MessageView
+    mounted: true
+  - 
+    id: 4
+    plugin: Base
+    class: SceneView
+    mounted: true
+    state: 
+      editMode: false
+      viewpointOperationMode: thirdPerson
+      visible_polygon_elements: [ face ]
+      highlighting: false
+      collisionLines: false
+      restrictCameraRoll: true
+      verticalAxis: Z
+      lightingMode: normal
+      cullingMode: enabled
+      defaultHeadLight: true
+      defaultHeadLightIntensity: 0.75
+      headLightLightingFromBack: false
+      worldLight: true
+      worldLightIntensity: 0.5
+      worldLightAmbient: 0.3
+      additionalLights: true
+      fog: true
+      floorGrid: false
+      floorGridSpan: 10
+      floorGridInterval: 0.5
+      xzGridSpan: 10
+      xzGridInterval: 0.5
+      xzGrid: false
+      yzGridSpan: 10
+      yzGridInterval: 0.5
+      texture: true
+      lineWidth: 1
+      pointSize: 1
+      normalVisualization: false
+      normalLength: 0.01
+      lightweightViewChange: false
+      coordinateAxes: true
+      fpsTestIteration: 1
+      upsideDown: false
+      cameras: 
+        - 
+          camera: [ System, Perspective ]
+          fieldOfView: 0.698132
+          near: 0.01
+          far: 100
+          eye: [ -2.3409, -1.31751, 1.42975 ]
+          direction: [ 0.818052, 0.438501, -0.372165 ]
+          up: [ 0.328013, 0.175825, 0.928166 ]
+        - 
+          camera: [ System, Orthographic ]
+          orthoHeight: 20
+          near: 0.01
+          far: 100
+        - 
+          camera: BodyTrackingCamera
+          isCurrent: true
+          backgroundColor: [ 0.1, 0.1, 0.3 ]
+          gridColor: [ 0.9, 0.9, 0.9, 1 ]
+          xzgridColor: [ 0.9, 0.9, 0.9, 1 ]
+          yzgridColor: [ 0.9, 0.9, 0.9, 1 ]
+          isDedicatedItemCheckEnabled: false
+        - 
+          id: 5
+          name: "Camera Scene"
+          plugin: Base
+          class: SceneView
+          mounted: true
+          state: 
+            editMode: false
+            viewpointOperationMode: thirdPerson
+            visible_polygon_elements: [ face ]
+            highlighting: false
+            collisionLines: false
+            restrictCameraRoll: true
+            verticalAxis: Z
+            lightingMode: normal
+            cullingMode: enabled
+            defaultHeadLight: true
+            defaultHeadLightIntensity: 0.75
+            headLightLightingFromBack: false
+            worldLight: true
+            worldLightIntensity: 0.5
+            worldLightAmbient: 0.3
+            additionalLights: true
+            fog: true
+            floorGrid: false
+            floorGridSpan: 10
+            floorGridInterval: 0.5
+            xzGridSpan: 10
+            xzGridInterval: 0.5
+            xzGrid: false
+            yzGridSpan: 10
+            yzGridInterval: 0.5
+            texture: true
+            lineWidth: 1
+            pointSize: 1
+            normalVisualization: false
+            normalLength: 0.01
+            lightweightViewChange: false
+            coordinateAxes: true
+            fpsTestIteration: 1
+            upsideDown: false
+            cameras: 
+              - 
+                camera: [ System, Perspective ]
+                fieldOfView: 0.698132
+                near: 0.01
+                far: 100
+                eye: [ 4, 2, 1.5 ]
+                direction: [ -0.888889, -0.444444, -0.111111 ]
+                up: [ -0.0993808, -0.0496904, 0.993808 ]
+              - 
+                camera: [ System, Orthographic ]
+                orthoHeight: 20
+                near: 0.01
+                far: 100
+              - 
+                camera: [ quadcopter, Camera ]
+                isCurrent: true
+                backgroundColor: [ 0.1, 0.1, 0.3 ]
+                gridColor: [ 0.9, 0.9, 0.9, 1 ]
+                xzgridColor: [ 0.9, 0.9, 0.9, 1 ]
+                yzgridColor: [ 0.9, 0.9, 0.9, 1 ]
+                isDedicatedItemCheckEnabled: false
+        - 
+          id: 6
+          plugin: Base
+          class: VirtualJoystickView
+          mounted: true
+        - 
+          id: 7
+          plugin: Body
+          class: BodyLinkView
+          mounted: true
+          state: 
+            showRotationMatrix: false
+        - 
+          id: 8
+          plugin: Body
+          class: JointDisplacementView
+          mounted: true
+          state: 
+            show_selected_joints: false
+            show_joint_ids: true
+            show_joint_names: false
+            overlap_joint_names: false
+            show_sliders: true
+            show_dials: false
+            show_phases: true
+        - 
+          id: 9
+          plugin: Body
+          class: LinkDeviceListView
+          mounted: true
+          state: 
+            element_type: link
+            listingMode: list
+layoutOfToolBars:
+  rows: 
+    - 
+      - { name: "FileBar", x: 0, priority: 0 }
+      - { name: "ScriptBar", x: 49, priority: 0 }
+      - { name: "TimeBar", x: 98, priority: 0 }
+      - { name: "SceneBar", x: 1042, priority: 0 }
+      - { name: "GraphBar", x: 1323, priority: 0 }
+      - { name: "SimulationBar", x: 1436, priority: 0 }
+      - { name: "BodyBar", x: 1645, priority: 0 }
+    - 
+      - { name: "KinematicsBar", x: 0, priority: 0 }
+      - { name: "BodyMotionGenerationBar", x: 248, priority: 0 }
