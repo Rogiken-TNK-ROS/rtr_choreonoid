@@ -78,9 +78,9 @@ items:
             saveMode: "Manual save"
         - 
           id: 6
-          name: "WorldRos"
-          plugin: RosBody
-          class: WorldRosItem
+          name: "WorldROS"
+          plugin: ROS
+          class: WorldROSItem
           data: 
             publishClockUpdateRate: 100
             publishLinkStatesUpdateRate: 0
