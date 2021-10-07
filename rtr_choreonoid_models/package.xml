@@ -10,9 +10,8 @@
   <author email="groadpg@gmail.com">Ryodo Tanaka</author>
   
   <buildtool_depend>catkin</buildtool_depend>
-  <depend>choreonoid</depend>
-  <exec_depend>choreonoid_ros_control</exec_depend>
-  <exec_depend>choreonoid_ros_plugins</exec_depend>
+  <exec_depend>choreonoid</exec_depend>
+  <exec_depend>choreonoid_ros</exec_depend>
   <export>
     <build_type>cmake</build_type>
   </export>
