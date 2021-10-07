@@ -194,7 +194,7 @@ links:
         elements:
           RigidBody:
             translation: [ 0, 0, 0.00 ]
-            centerOfMass: [ 0, 0.05544, 0.09464 ]
+            centerOfMass: [ 0, 0.00, 0.00 ]
             mass: 0.1
             inertia: [
             0.19949663865, 0,             0,
@@ -225,7 +225,7 @@ links:
         elements:
           RigidBody:
             translation: [ 0, 0, 0.03 ]
-            centerOfMass: [ 0, 0.05544, 0.09464 ]
+            centerOfMass: [ 0, 0.00, 0.00 ]
             mass: 0.1
             inertia: [
             0.19949663865, 0,             0,
