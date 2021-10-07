@@ -202,7 +202,7 @@ links:
             0,             0.0, 0.01 ]
             elements:
               Shape:
-                geometry: { type: Box, size: [ 0.04, 0.04, 0.04 ] }
+                geometry: { type: Cylinder, radius: 0.05017, height: 0.0869 }
                 rotation: [ 1, 0, 0, 90 ]
                 appearance:
                   material:
