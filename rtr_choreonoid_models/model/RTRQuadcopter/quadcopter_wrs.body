@@ -209,37 +209,6 @@ links:
                     diffuseColor: [ 0.73, 0.36, 0.02 ]
                     specularColor: [ 0, 0, 0 ]
                     qshinines: 0
-      -
-        type: RangeSensor
-        name: LowerRangeSensor
-        translation: [ 0.0, 0.0, -0.05 ]
-        yawRange: 360
-        yawStep:  1.0
-        pitchRange: 120.0
-        pitchStep: 1.0
-        scanRate:  20
-        maxDistance: 100.0
-        minDistance: 0.5
-        delay: 0.0
-        on: true
-        elements:
-          RigidBody:
-            translation: [ 0, 0, 0.03 ]
-            centerOfMass: [ 0, 0.00, 0.00 ]
-            mass: 0.0
-            inertia: [
-            0.01, 0,             0,
-            0,             0.01, 0.0,
-            0,             0.0, 0.01 ]
-            elements:
-              Shape:
-                geometry: { type: Box, size: [ 0.04, 0.04, 0.04 ] }
-                rotation: [ 1, 0, 0, 90 ]
-                appearance:
-                  material:
-                    diffuseColor: [ 0.73, 0.36, 0.02 ]
-                    specularColor: [ 0, 0, 0 ]
-                    qshinines: 0
   -
     name: CAMERA_T
     parent: BODY
