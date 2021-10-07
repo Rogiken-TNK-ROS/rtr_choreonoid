@@ -183,9 +183,9 @@ links:
         name: UpperRangeSensor
         translation: [ 0.0, 0.0, 0.05 ]
         yawRange: 360
-        yawStep:  1.0
-        pitchRange: 120.0
-        pitchStep: 1.0
+        yawStep:  0.25
+        pitchRange: 40.0
+        pitchStep: 1.25
         scanRate:  20
         maxDistance: 100.0
         minDistance: 0.5
