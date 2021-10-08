@@ -334,7 +334,7 @@ links:
     jointAxis: -Y
     jointRange: [ 0, 180 ]
     maxJointVelocity: 90
-    jointId: 1
+    jointId: 5
     elements:
       -
         type: RigidBody
