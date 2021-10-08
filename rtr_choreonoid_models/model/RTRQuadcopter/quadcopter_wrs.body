@@ -185,10 +185,11 @@ links:
         yawRange: 360
         yawStep:  0.25
         pitchRange: 40.0
-        pitchStep: 1.25
+        pitchStep: 2.5
         scanRate:  20
         maxDistance: 100.0
         minDistance: 0.1
+        #  https://www.argocorp.com/cam/special/Velodyne/VLP-16.html
         delay: 0.0
         on: true
         elements:
