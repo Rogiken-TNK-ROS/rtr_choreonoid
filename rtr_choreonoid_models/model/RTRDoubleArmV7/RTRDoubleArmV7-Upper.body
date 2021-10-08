@@ -584,7 +584,7 @@ links:
                 cutOffAngle: 60
                 cutOffExponent: 6
                 attenuation: [ 1, 0, 0 ]
-                intensity: 1.0
+                intensity: 0.7
   -
     name: BOOM
     parent: BLOCK
@@ -822,6 +822,36 @@ links:
     jointMotorForceRange: [ -10000.0, 10000.0 ]
     jointLockForceRange: [ -10000.0, 10000.0 ]
     elements:
+      -
+        type: Shape
+        translation: [0, 0.075, -0.2 ]
+        rotation: [ -1, 0, 0, 90 ]
+        geometry: { type: Cylinder, radius: 0.03, height: 0.07 }
+      -
+        type: Shape
+        translation: [0, -0.075, -0.2 ]
+        rotation: [ -1, 0, 0, 90 ]
+        geometry: { type: Cylinder, radius: 0.03, height: 0.07 }
+      -
+        type: SpotLight
+        name: TohokuGripperLight00
+        translation: [0, 0.075, -0.2]
+        direction: [ 0, 0, -1 ]
+        beamWidth: 50
+        cutOffAngle: 60
+        cutOffExponent: 6
+        attenuation: [ 1, 0, 0 ]
+        intensity: 0.35
+      -
+        type: SpotLight
+        name: TohokuGripperLight01
+        translation: [0, -0.075, -0.2]
+        direction: [ 0, 0, -1 ]
+        beamWidth: 50
+        cutOffAngle: 60
+        cutOffExponent: 6
+        attenuation: [ 1, 0, 0 ]
+        intensity: 0.35
       - 
         type: Camera
         name: TohokuDepthCamera00
@@ -2107,6 +2137,36 @@ links:
     jointMotorForceRange: [ -8000.0, 8000.0 ]
     jointLockForceRange: [ -8000.0, 8000.0 ]
     elements:
+      -
+        type: Shape
+        translation: [0, 0.075, -0.2 ]
+        rotation: [ -1, 0, 0, 90 ]
+        geometry: { type: Cylinder, radius: 0.03, height: 0.07 }
+      -
+        type: Shape
+        translation: [0, -0.075, -0.2 ]
+        rotation: [ -1, 0, 0, 90 ]
+        geometry: { type: Cylinder, radius: 0.03, height: 0.07 }
+      -
+        type: SpotLight
+        name: ManiGripperLight00
+        translation: [0, 0.075, -0.2]
+        direction: [ 0, 0, -1 ]
+        beamWidth: 50
+        cutOffAngle: 60
+        cutOffExponent: 6
+        attenuation: [ 1, 0, 0 ]
+        intensity: 0.35
+      -
+        type: SpotLight
+        name: ManiGripperLight01
+        translation: [0, -0.075, -0.2]
+        direction: [ 0, 0, -1 ]
+        beamWidth: 50
+        cutOffAngle: 60
+        cutOffExponent: 6
+        attenuation: [ 1, 0, 0 ]
+        intensity: 0.35
       - 
         type: Camera
         name: ManiDepthCamera00
