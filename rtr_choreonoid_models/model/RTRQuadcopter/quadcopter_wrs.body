@@ -188,7 +188,7 @@ links:
         pitchStep: 1.25
         scanRate:  20
         maxDistance: 100.0
-        minDistance: 0.5
+        minDistance: 0.1
         delay: 0.0
         on: true
         elements:
