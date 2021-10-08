@@ -210,7 +210,7 @@ links:
                     specularColor: [ 0, 0, 0 ]
                     qshinines: 0
   -
-    name: CAMERA_T
+    name: CAMERA_2
     parent: BODY
     translation: [ 0, 0, -0.05 ]
     jointType: revolute
@@ -298,6 +298,76 @@ links:
               type: Cylinder
               radius: 0.003
               height: 0.01
+            appearance:
+              material:
+                diffuseColor: [ 0.8, 0.2, 0.2 ]
+                specularColor: [ 0.2, 0.2, 0 ]
+                shininess: 0.6
+      -
+        type: SpotLight
+        name: Light_for_Camera
+        translation: [ 0.03, 0, 0.01 ]
+        direction: [ 1, 0, 0 ]
+        beamWidth: 90
+        cutOffAngle: 50
+        cutOffExponent: 6
+        attenuation: [ 1, 0, 0.01 ]
+        intensity: 1.0
+        elements:
+          Shape:
+            rotation: [ 0, 0, 1, 90 ]
+            translation: [ -0.02, 0, 0 ]
+            geometry:
+              type: Cone
+              height: 0.04
+              radius: 0.002
+            appearance:
+              material:
+                diffuseColor: [ 1.0, 1.0, 0.4 ]
+                ambientIntensity: 0.9
+                emissiveColor: [ 0.8, 0.8, 0.3 ]
+  -
+    name: CAMERA_3
+    parent: BODY
+    translation: [ 0, 0, 0.10 ]
+    jointType: revolute
+    jointAxis: -Y
+    jointRange: [ 0, 180 ]
+    maxJointVelocity: 90
+    jointId: 1
+    elements:
+      -
+        type: RigidBody
+        centerOfMass: [ 0, 0, 0 ]
+        mass: 0.03
+        inertia: [
+          0.0000108, 0,   0,
+          0,   0.0000108, 0,
+          0,   0,   0.0000108 ]
+        elements:
+          Shape:
+            geometry:
+              type: Sphere
+              radius: 0.03
+            appearance: *BlueAppearance
+      -
+        type: Camera
+        name: Camera3
+        translation: [ 0.02, 0, 0.02 ]
+        rotation: [ [ 1, 0, 0, 90 ], [ 0, 1, 0, -90 ] ]
+        format: COLOR_DEPTH
+        fieldOfView: 65
+        nearClipDistance: 0.02
+        width: 640
+        height: 480
+        frameRate: 30
+        elements:
+          Shape:
+            rotation: [ 1, 0, 0, 90 ]
+            geometry:
+              type: Cylinder
+              radius: 0.003
+              height: 0.02
             appearance:
               material:
                 diffuseColor: [ 0.8, 0.2, 0.2 ]
