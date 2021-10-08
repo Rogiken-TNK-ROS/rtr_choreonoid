@@ -185,7 +185,7 @@ links:
         yawRange: 360
         yawStep:  0.25
         pitchRange: 40.0
-        pitchStep: 1.25
+        pitchStep: 2.5
         scanRate:  20
         maxDistance: 100.0
         minDistance: 0.1
