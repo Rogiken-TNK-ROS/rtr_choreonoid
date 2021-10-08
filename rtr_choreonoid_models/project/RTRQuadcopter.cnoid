@@ -19,15 +19,15 @@ items:
           1, -4.1549709e-06, -5.91607799e-08, 
           4.15497076e-06, 1, -2.28602061e-06, 
           5.91702782e-08, 2.28602037e-06, 1 ]
-        jointDisplacements: [ -0, 0.000229183, 0.000229183, 0.000229183, 0.000229183 ]
-        initialJointDisplacements: [ 0, 0, 0, 0, 0 ]
-        jointPositions: [ -0, 4e-06, 4e-06, 4e-06, 4e-06 ]
+        jointDisplacements: [ -0, 0, 0, 0, 0, 0 ]
+        initialJointDisplacements: [ 0, 0,  0, 0, 0, 0 ]
+        jointPositions: [ -0, 0, 4e-06, 4e-06, 4e-06, 4e-06 ]
         initialRootPosition: [ 1.5, -1.5, 0.2 ]
         initialRootAttitude: [ 
         1, 0, 0, 
         0, 1, 0, 
         0, 0, 1 ]
-        initialJointPositions: [ 0, 0, 0, 0, 0 ]
+        initialJointPositions: [ 0, 0, 0, 0, 0, 0 ]
         staticModel: false
         collisionDetection: true
         selfCollisionDetection: false
