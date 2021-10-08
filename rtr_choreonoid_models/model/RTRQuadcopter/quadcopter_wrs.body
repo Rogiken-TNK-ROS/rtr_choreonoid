@@ -305,7 +305,7 @@ links:
                 shininess: 0.6
       -
         type: SpotLight
-        name: Light_for_Camera
+        name: Light_for_Camera2
         translation: [ 0.03, 0, 0.01 ]
         direction: [ 1, 0, 0 ]
         beamWidth: 90
@@ -375,7 +375,7 @@ links:
                 shininess: 0.6
       -
         type: SpotLight
-        name: Light_for_Camera
+        name: Light_for_Camera3
         translation: [ 0.03, 0, 0.01 ]
         direction: [ 1, 0, 0 ]
         beamWidth: 90
